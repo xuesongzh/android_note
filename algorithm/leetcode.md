@@ -1,4 +1,3 @@
-## 一、前言
 
 LeetCode这部分内容的算法比较难，自己能力有限，刷的题目也比较少，这部分内容就面试及笔试出现的频率整理出一部分内容，熟悉相关解题方法，争取在笔试中能够AC。
 
@@ -10,7 +9,6 @@ LeetCode这部分内容的算法比较难，自己能力有限，刷的题目也
 - [动态规划](/algorithm/LeetCode/Dynamic-Programming.md)
 - [贪心算法](/algorithm/LeetCode/Greedy.md)
 
-## 二、目录
 
 - [Dynamic Programming](/algorithm/LeetCode/Dynamic-Programming.md)
   - [Distinct Subsequences](/algorithm/LeetCode/Dynamic-Programming/Distinct-Subsequences.md)

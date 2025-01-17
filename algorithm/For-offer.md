@@ -1,4 +1,3 @@
-## 一、前言
 
 ![](http://img1.ph.126.net/41C00Lhxd4l7JvKH10MjJA==/1327154515208819548.jpg)
 
@@ -6,7 +5,6 @@
 
 本部分内容整理了剑指offer中的所有题目，提供了详细的解题思路及Java代码实现，希望能对大家的面试有帮助！
 
-## 二、目录
 
 - [01.二维数组中的查找](/algorithm/For-offer/01.md)
 - [02.替换空格](/algorithm/For-offer/02.md)

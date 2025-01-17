@@ -1,4 +1,4 @@
-## 一、前言
+
 
 本部分内容是关于Java并发的一些知识总结，既是学习的难点，同时也是面试中几乎必问的知识点。
 
@@ -14,7 +14,7 @@
 
 因此针对以上问题，整理了相关内容。
 
-## 二、目录
+
 
 - [Java创建线程的三种方式](/java/concurrence/CreateThread.md)
 - [Java线程池](/java/concurrence/thread-pool.md)

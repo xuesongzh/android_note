@@ -1,4 +1,3 @@
-## 一、前言
 
 本部分内容主要包含以下：
 
@@ -11,7 +10,6 @@
 
 以上内容都是Android中的基础知识，对于Android的学习很有帮助。其中事件分发机制、消息机制、binder等都是面试常问知识点，是必须要掌握的。
 
-## 二、目录
 
 - [Activity全方位解析](/android/basis/activity.md)
 - [Service全方位解析](/android/basis/service.md)

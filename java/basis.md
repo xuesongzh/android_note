@@ -1,4 +1,4 @@
-## 一、前言
+
 
 本部分内容主要包含以下：
 
@@ -11,7 +11,7 @@
 
 以上内容都是Java中的基础知识，对于Java的学习很有帮助。其中集合、反射、IO等都是面试常问知识点，是必须要掌握的，因此整理在本部分当中。
 
-## 二、目录
+
 
 - [Java集合框架](/java/basis/Collections-Framework.md)
 - [Java集合——ArrayList](/java/basis/arraylist.md)

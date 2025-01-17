@@ -1,4 +1,3 @@
-## 一、前言
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0wV_ynDrdEc8wVtxqKLdU_dqzBlK05q2WJwhwf2Y5E297W8dZw)
 
@@ -8,7 +7,6 @@
 
 本部分内容不仅介绍了图的基础概念及特性，同时介绍了图涉及的一些算法的Java实现。
 
-## 二、目录
 
 - [图的基础](/data-structure/graph/graph-introduction.md)
 - [拓扑排序](/data-structure/graph/topology.md)

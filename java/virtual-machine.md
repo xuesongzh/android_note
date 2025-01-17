@@ -1,4 +1,4 @@
-## 一、前言
+
 
 本部分内容是关于Java虚拟机的一些面试高频知识点的总结。说到对Java虚拟机的学习，就不得不提下这本书《深入理解Java虚拟机》。
 
@@ -12,7 +12,7 @@
 - 类加载机制
 - 垃圾收集算法/收集器
 
-## 二、目录
+
 
 - [对象的创建、内存布局和访问定位](/java/virtual-machine/object.md)
 - [Java内存区域与内存模型](/java/virtual-machine/memory.md)
