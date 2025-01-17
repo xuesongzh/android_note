@@ -24,11 +24,11 @@ Presenter 负责完成View于Model间的交互
 
 下面两幅图通过数据与视图之间的交互清楚地展示了这种变化：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-4fd0f30f81ae423e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-4fd0f30f81ae423e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 MVC模式下实际上就是Activty与Model之间交互，View完全独立出来了。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-7c936f2223dce1de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-7c936f2223dce1de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 MVP模式通过Presenter实现数据和视图之间的交互，简化了Activity的职责。同时即避免了View和Model的直接联系，又通过Presenter实现两者之间的沟通。
 
@@ -36,7 +36,7 @@ MVP模式通过Presenter实现数据和视图之间的交互，简化了Activity
 
 ### MVC和MVP的区别
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-4472518336d7465e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-4472518336d7465e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **MVC中是允许Model和View进行交互的，而MVP中很明显，Model与View之间的交互由Presenter完成。还有一点就是Presenter与View之间的交互是通过接口的。**
 
@@ -48,7 +48,7 @@ MVP模式通过Presenter实现数据和视图之间的交互，简化了Activity
 使用MVP的好处之一就是模块职责划分明显，层次清晰。
 该例的结构图即可展现此优点。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-3f3d046d40d6bfbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-3f3d046d40d6bfbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 1.Model层
 
@@ -330,7 +330,7 @@ presenter里面有个OnLoginFinishedListener， 其在Presenter层实现，给Mo
 
 **示例展示：**
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-216404156964b311.gif?imageMogr2/auto-orient/strip)
+![img](https://upload-images.jianshu.io/upload_images/3985563-216404156964b311.gif?imageMogr2/auto-orient/strip)
 
 [代码地址](https://github.com/LRH1993/MVPdemo)
 
@@ -340,4 +340,4 @@ MVP模式的整个核心流程：
 
 View与Model并不直接交互，而是使用Presenter作为View与Model之间的桥梁。其中Presenter中同时持有View层的Interface的引用以及Model层的引用，而View层持有Presenter层引用。当View层某个界面需要展示某些数据的时候，首先会调用Presenter层的引用，然后Presenter层会调用Model层请求数据，当Model层数据加载成功之后会调用Presenter层的回调方法通知Presenter层数据加载情况，最后Presenter层再调用View层的接口将加载后的数据展示给用户。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-03352e00ce8b4083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-03352e00ce8b4083.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

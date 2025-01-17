@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
 **注意：**客户端和服务端是通过拿到对方的 Messenger 来发送 Message 的。只不过客户端通过 bindService onServiceConnected 而服务端通过 message.replyTo 来获得对方的 Messenger 。Messenger 中有一个 Hanlder 以串行的方式处理队列中的消息。不存在并发执行，因此我们不用考虑线程同步的问题。
 
-[![Markdown](http://i1.piimg.com/588795/e7bed224f80f5dad.png)](http://i1.piimg.com/588795/e7bed224f80f5dad.png)
+[![Markdown](https://i1.piimg.com/588795/e7bed224f80f5dad.png)](https://i1.piimg.com/588795/e7bed224f80f5dad.png)
 
 ## 四、使用 AIDL
 
@@ -164,7 +164,7 @@ Messenger 是以串行的方式处理客户端发来的消息，如果大量消�
 
 - *基本数据类型*；
 - *String* 和 *CharSequence*
-  [![String](http://images.cnitblog.com/blog/497634/201311/08083111-591e2833f8a34264b0dad417f4188e35.jpg)](http://images.cnitblog.com/blog/497634/201311/08083111-591e2833f8a34264b0dad417f4188e35.jpg)
+  [![String](https://images.cnitblog.com/blog/497634/201311/08083111-591e2833f8a34264b0dad417f4188e35.jpg)](https://images.cnitblog.com/blog/497634/201311/08083111-591e2833f8a34264b0dad417f4188e35.jpg)
 - *ArrayList* ，里面的元素必须能够被 AIDL 支持；
 - *HashMap* ，里面的元素必须能够被 AIDL 支持；
 - *Parcelable* ，实现 Parcelable 接口的对象；
@@ -946,6 +946,6 @@ public class TCPServerService extends Service {
 
 演示：
 
-[![Markdown](http://i4.buimg.com/588795/90d3ecdb634908c1.jpg)](http://i4.buimg.com/588795/90d3ecdb634908c1.jpg)
+[![Markdown](https://i4.buimg.com/588795/90d3ecdb634908c1.jpg)](https://i4.buimg.com/588795/90d3ecdb634908c1.jpg)
 
 UDP Socket 可以自己尝试着实现。

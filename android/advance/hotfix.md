@@ -6,7 +6,7 @@
 - <https://github.com/jasonross/Nuwa>
 - <https://github.com/bunnyblue/DroidFix>
 
-上述三个框架呢，根据其描述，原理都来自：[安卓App热补丁动态修复技术介绍](https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=400118620&idx=1&sn=b4fdd5055731290eef12ad0d17f39d4a&scene=1&srcid=1106Imu9ZgwybID13e7y2nEi#wechat_redirect)，以及[Android dex分包方案](http://my.oschina.net/853294317/blog/308583)，所以这俩篇务必要看。这里就不对三个框架做过多对比了，因为原理都一致，实现的代码可能差异并不是特别大。
+上述三个框架呢，根据其描述，原理都来自：[安卓App热补丁动态修复技术介绍](https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=400118620&idx=1&sn=b4fdd5055731290eef12ad0d17f39d4a&scene=1&srcid=1106Imu9ZgwybID13e7y2nEi#wechat_redirect)，以及[Android dex分包方案](https://my.oschina.net/853294317/blog/308583)，所以这俩篇务必要看。这里就不对三个框架做过多对比了，因为原理都一致，实现的代码可能差异并不是特别大。
 
 有兴趣的直接看这篇原理文章，加上上面框架的源码基本就可以看懂了。当然了，本篇博文也会做个上述框架源码的解析，以及在整个实现过程中用到的技术的解析。
 
@@ -193,12 +193,12 @@ ok，点击run即可了，注意项目中导入javassist-*.jar的包。
 
 ok，我们反编译看下我们生成的class文件：
 
-![img](http://img.blog.csdn.net/20151117095755788)
+![img](https://img.blog.csdn.net/20151117095755788)
 
 ok，关于javassist，如果有兴趣的话，大家可以参考几篇文章学习下：
 
-- <http://www.ibm.com/developerworks/cn/java/j-dyn0916/>
-- <http://zhxing.iteye.com/blog/1703305>
+- <https://www.ibm.com/developerworks/cn/java/j-dyn0916/>
+- <https://zhxing.iteye.com/blog/1703305>
 
 ### (2）如何在dx之前去进行(1)的操作
 
@@ -226,7 +226,7 @@ android {
 
 ok，到这呢，你就可以点击run了。ok，有兴趣的话，你可以反编译去看看`dodola.hotfix.LoadBugClass`这个类的构造方法中是否已经添加了改行代码。
 
-关于反编译的用法，工具等，参考：<http://blog.csdn.net/lmj623565791/article/details/23564065>
+关于反编译的用法，工具等，参考：<https://blog.csdn.net/lmj623565791/article/details/23564065>
 
 ok，到此我们已经能够正常的安装apk并且运行了。但是目前还未涉及到打补丁的相关代码。
 
@@ -536,7 +536,7 @@ public class HotfixApplication extends Application
 
 ok，那么再次运行我们的app。
 
-![img](http://img.blog.csdn.net/20151117095833727)
+![img](https://img.blog.csdn.net/20151117095833727)
 
 ok，最后说一下，说项目中有一个打补丁的按钮，在menu下，那么你也可以不在Application里面添加我们最后的3行。
 

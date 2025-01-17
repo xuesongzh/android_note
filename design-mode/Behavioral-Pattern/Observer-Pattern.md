@@ -13,7 +13,7 @@
 下面以一个简单的示意性实现为例，讨论观察者模式的结构。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-8f775c097136a39d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-8f775c097136a39d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

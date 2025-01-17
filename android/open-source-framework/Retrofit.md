@@ -13,7 +13,7 @@ Retrofit retrofit = new Retrofit.Builder()
     .build();
 ```
 
-**builder 模式，外观模式（门面模式）**，这就不多说了，可以看看 [stay 的 Retrofit分析-经典设计模式案例](http://www.jianshu.com/p/fb8d21978e38)这篇文章。
+**builder 模式，外观模式（门面模式）**，这就不多说了，可以看看 [stay 的 Retrofit分析-经典设计模式案例](https://www.jianshu.com/p/fb8d21978e38)这篇文章。
 
 ### 2.2 定义 API 并获取 API 实例
 
@@ -96,7 +96,7 @@ OkHttpCall okHttpCall = new OkHttpCall<>(serviceMethod, args);
 return serviceMethod.callAdapter.adapt(okHttpCall);
 ```
 
-在继续分析这三行代码之前，我们先看看 [Stay 在 Retrofit分析-漂亮的解耦套路](http://www.jianshu.com/p/45cb536be2f4) 这篇文章中分享的流程图，完整的流程概览建议仔细看看这篇文章：
+在继续分析这三行代码之前，我们先看看 [Stay 在 Retrofit分析-漂亮的解耦套路](https://www.jianshu.com/p/45cb536be2f4) 这篇文章中分享的流程图，完整的流程概览建议仔细看看这篇文章：
 
 ![retrofit_stay.png](https://blog.piasy.com/img/201606/retrofit_stay.png)
 

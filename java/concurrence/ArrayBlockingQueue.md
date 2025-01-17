@@ -43,7 +43,7 @@
 | ----------- | ---------------- | --------------------- | ------ | -------------------- |
 | **Insert**  | add(e)           | offer(e)              | put(e) | offer(e, time, unit) |
 | **Remove**  | remove()         | poll()                | take() | poll(time, unit)     |
-| **Examine** | element()        | peek()                | 无      | 无                    |
+| **Examine** | element()        | peek()                | 无     | 无                   |
 
 BlockingQueue虽然比起Queue在操作上提供了更多的支持，但是它在使用有如下的几点:
 
@@ -56,7 +56,7 @@ BlockingQueue虽然比起Queue在操作上提供了更多的支持，但是它�
 有了上面的铺垫，下面我们就可以真正开始分析ArrayBlockingQueue了。在分析之前，首先让我们看看API对其的描述。
 **注意:这里使用的JDK版本为1.7，不同的JDK版本在实现上存在不同**
 
-![](http://upload-images.jianshu.io/upload_images/1684370-ca508b8735c40257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1684370-ca508b8735c40257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 首先让我们看下ArrayBlockingQueue的核心组成：
 
@@ -185,11 +185,11 @@ BlockingQueue虽然比起Queue在操作上提供了更多的支持，但是它�
 
 > `黄色表示数组中有元素`
 
-![](http://upload-images.jianshu.io/upload_images/1684370-74dd3cf6fd2be432.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1684370-74dd3cf6fd2be432.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 当再一次执行put的时候,其结果为：
 
-![](http://upload-images.jianshu.io/upload_images/1684370-bdbe3fe4f43d5130.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1684370-bdbe3fe4f43d5130.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 此时放入的元素会从头开始置，我们通过其incr方法更加清晰的看出其底层的操作：
 

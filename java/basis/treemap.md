@@ -22,7 +22,7 @@ for(Entry<Integer, String> entry : tmap.entrySet()) {
 
 其大致的结构如下所示：  
 ![](https://cloud.githubusercontent.com/assets/1736354/7041463/05ee676a-de0c-11e4-9412-4c6964931e43.png "treemap")  
-使用红黑树的好处是能够使得树具有不错的平衡性，这样操作的速度就可以达到log\(n\)的水平了。具体红黑树的实现不在这里赘述，可以参考[数据结构之红黑树](http://dongxicheng.org/structure/red-black-tree/)、[wikipedia-红黑树](http://zh.wikipedia.org/wiki/红黑树)等的实现。
+使用红黑树的好处是能够使得树具有不错的平衡性，这样操作的速度就可以达到log\(n\)的水平了。具体红黑树的实现不在这里赘述，可以参考[数据结构之红黑树](https://dongxicheng.org/structure/red-black-tree/)、[wikipedia-红黑树](https://zh.wikipedia.org/wiki/红黑树)等的实现。
 
 ### 二、 put函数 {#2-_put函数}
 
@@ -130,7 +130,7 @@ for(Entry<Integer, String> entry : tmap.entrySet()) {
 }
 ```
 
-根据[The enhanced for statement](http://docs.oracle.com/javase/specs/jls/se8/html/jls-14.html#jls-14.14.2)，for语句会做如下转换为：
+根据[The enhanced for statement](https://docs.oracle.com/javase/specs/jls/se8/html/jls-14.html#jls-14.14.2)，for语句会做如下转换为：
 
 ```java
 for(Iterator<Map.Entry<String, String>> it = tmap.entrySet().iterator() ; tmap.hasNext(); ) {

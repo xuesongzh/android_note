@@ -15,7 +15,7 @@
   
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-02c2481f2a39225e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-02c2481f2a39225e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 二、Java内存模型
 
@@ -27,7 +27,7 @@
 
 ****
 
-![](http://upload-images.jianshu.io/upload_images/3985563-7db5daa99dd1f3c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-7db5daa99dd1f3c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 关于主内存与工作内存之间具体的交互协议，即一个变量如何从主内存拷贝到工作内存、如何从工作内存同步回主内存之类的实现细节，Java内存模型中定义了8种操作来完成，并且每种操作都是原子的、不可再分的。
@@ -35,7 +35,7 @@
 ### 八种操作：
 
 | 类型   | 说明                                                                                                         |
-|--------|--------------------------------------------------------------------------------------------------------------|
+| ------ | ------------------------------------------------------------------------------------------------------------ |
 | lock   | 作用于主内存的变量，把一个变量标识为一条线程独占的状态                                                       |
 | unlock | 作用于主内存的变量，把一个处于锁定状态的变量释放出来。                                                       |
 | read   | 把一个变量的值从主内存传输到工作内存中，以便随后的load使用。                                                 |

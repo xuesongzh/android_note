@@ -1,10 +1,10 @@
 ## 一、权限处理分类
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-8ec96b2fa802e624.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-8ec96b2fa802e624.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 由上图可以看出，主要分为四类。下表逐一介绍各类对应的一些情况。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-fa7820a1f044292c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-fa7820a1f044292c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 二、动态权限申请
 
@@ -12,7 +12,7 @@
 
 ### (1)权限列表
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-80387c4edc364fb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-80387c4edc364fb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Android6.0以上把权限分为普通权限和危险权限，所以危险权限是需要动态申请，给予用户提示的，而危险权限就是上表展示的内容。
 
@@ -36,7 +36,7 @@ Android6.0以上把权限分为普通权限和危险权限，所以危险权限�
 
 **具体权限方法详解：**
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-97cd0faf4dee20fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-97cd0faf4dee20fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 权限申请示例
 
@@ -112,7 +112,7 @@ public boolean shouldShowRequestPermissionRationale(@NonNull String permission) 
 
 以上就是动态申请权限的逻辑，大概流程如下：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-68ccd1ded272a212.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-68ccd1ded272a212.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **注意：**
 shouldShowRequestPermissionRationale ：默认情况下，不重写该方法，在Android原生系统中，如果第二次弹出权限申请的对话框，会出现“以后不再弹出”的提示框，如果用户勾选了，你再申请权限，则shouldShowRequestPermissionRationale返回true，意思是说要给用户一个 解释，告诉用户为什么要这个权限。

@@ -1,10 +1,10 @@
 ## 一、View绘制的流程框架
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-5f3c64af676d9aee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-5f3c64af676d9aee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 View的绘制是从上往下一层层迭代下来的。DecorView-->ViewGroup（--->ViewGroup）-->View ，按照这个流程从上往下，依次measure(测量),layout(布局),draw(绘制)。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-a7ace6f9221c9d79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-a7ace6f9221c9d79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 二、Measure流程
 
@@ -34,7 +34,7 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
 先介绍下什么是MeasureSpec？
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-d3bf0905aeb8719b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-d3bf0905aeb8719b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 MeasureSpec由两部分组成，一部分是测量模式，另一部分是测量的尺寸大小。
 
@@ -56,17 +56,17 @@ AT_MOST ：对应LayoutParams中的wrap_content。View的大小不能大于父�
 
 这部分比较复杂。以下列图表表示不同的情况：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-e3f20c6662effb7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-e3f20c6662effb7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **当子View的LayoutParams的布局格式是wrap_content，可以看到子View的大小是父View的剩余尺寸，和设置成match_parent时，子View的大小没有区别。为了显示区别，一般在自定义View时，需要重写onMeasure方法，处理wrap_content时的情况，进行特别指定。**
 
 **从这里看出MeasureSpec的指定也是从顶层布局开始一层层往下去，父布局影响子布局。**
 
-可能关于MeasureSpec如何确定View大小还有些模糊，篇幅有限，没详细具体展开介绍，可以看[这篇文章](http://www.jianshu.com/p/1dab927b2f36)
+可能关于MeasureSpec如何确定View大小还有些模糊，篇幅有限，没详细具体展开介绍，可以看[这篇文章](https://www.jianshu.com/p/1dab927b2f36)
 
 View的测量流程：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-d1a57294428ff668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-d1a57294428ff668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 三、Layout流程
 
@@ -130,7 +130,7 @@ protected void onLayout(boolean changed, int left, int top, int right, int botto
 
 View的布局流程：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-8aefac42b3912539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-8aefac42b3912539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 四、Draw过程
 
@@ -189,7 +189,7 @@ public void draw(Canvas canvas) {
 
 View绘制流程：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-594f6b3cde8762c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-594f6b3cde8762c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 五、总结
 

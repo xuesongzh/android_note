@@ -39,7 +39,7 @@ buffer缓冲区实质上就是一块内存，用于写入数据，也供后续�
 
 position和limit的具体含义取决于当前buffer的模式。capacity在两种模式下都表示容量。  
 下面有张示例图，描诉了不同模式下position和limit的含义：  
-![buffers-modes.png](http://upload-images.jianshu.io/upload_images/3985563-74b53331f13ac591.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![buffers-modes.png](https://upload-images.jianshu.io/upload_images/3985563-74b53331f13ac591.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **容量（Capacity）**
 
@@ -71,8 +71,8 @@ CharBuffer buf = CharBuffer.allocate(1024);
 
 ##### Buffer的实现类
 
-![](http://upload-images.jianshu.io/upload_images/3985563-0f18367164c56cbd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
-其中MappedByteBuffer比较特殊。Java类库中的NIO包相对于IO 包来说有一个新功能是内存映射文件，日常编程中并不是经常用到，但是在处理大文件时是比较理想的提高效率的手段。其中MappedByteBuffer实现的就是内存映射文件，可以实现大文件的高效读写。 可以参考这两篇文章理解： [\[Java\]\[IO\]JAVA NIO之浅谈内存映射文件原理与DirectMemory](http://blog.csdn.net/szwangdf/article/details/10588489)，[深入浅出MappedByteBuffer](http://www.jianshu.com/p/f90866dcbffc)。
+![](https://upload-images.jianshu.io/upload_images/3985563-0f18367164c56cbd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+其中MappedByteBuffer比较特殊。Java类库中的NIO包相对于IO 包来说有一个新功能是内存映射文件，日常编程中并不是经常用到，但是在处理大文件时是比较理想的提高效率的手段。其中MappedByteBuffer实现的就是内存映射文件，可以实现大文件的高效读写。 可以参考这两篇文章理解： [\[Java\]\[IO\]JAVA NIO之浅谈内存映射文件原理与DirectMemory](https://blog.csdn.net/szwangdf/article/details/10588489)，[深入浅出MappedByteBuffer](https://www.jianshu.com/p/f90866dcbffc)。
 
 ### 三、Channel的使用
 
@@ -82,7 +82,7 @@ Java NIO Channel通道和流非常相似，主要有以下几点区别：
  - 通道可以异步读写。  
  - 通道总是基于缓冲区Buffer来读写。  
  - 正如上面提到的，我们可以从通道中读取数据，写入到buffer；也可以中buffer内读数据，写入到通道中。下面有个示意图：  
-![](http://upload-images.jianshu.io/upload_images/3985563-5dcaaf9b7106a7d9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-5dcaaf9b7106a7d9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 ##### Channel的实现类有：
 
@@ -146,20 +146,20 @@ Stevens在文章中一共比较了五种IO Model：
 **blocking IO**
 
 在UNIX中，默认情况下所有的socket都是blocking，一个典型的读操作流程大概是这样：  
-![](http://upload-images.jianshu.io/upload_images/3985563-0346e2299ba48238.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-0346e2299ba48238.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 当用户进程调用了recvfrom这个系统调用，kernel就开始了IO的第一个阶段：准备数据。对于network io来说，很多时候数据在一开始还没有到达（比如，还没有收到一个完整的UDP包），这个时候kernel就要等待足够的数据到来。而在用户进程这边，整个进程会被阻塞。当kernel一直等到数据准备好了，它就会将数据从kernel中拷贝到用户内存，然后kernel返回结果，用户进程才解除block的状态，重新运行起来。**所以，blocking IO的特点就是在IO执行的两个阶段都被block了。**
 
 **non-blocking IO**
 
 UNIX下，可以通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：  
-![](http://upload-images.jianshu.io/upload_images/3985563-e25734b5710ad5c2.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+![](https://upload-images.jianshu.io/upload_images/3985563-e25734b5710ad5c2.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
 从图中可以看出，当用户进程发出read操作时，如果kernel中的数据还没有准备好，那么它并不会block用户进程，而是立刻返回一个error。从用户进程角度讲 ，它发起一个read操作后，并不需要等待，而是马上就得到了一个结果。用户进程判断结果是一个error时，它就知道数据还没有准备好，于是它可以再次发送read操作。**一旦kernel中的数据准备好了，并且又再次收到了用户进程的system call，那么它马上就将数据拷贝到了用户内存，然后返回。所以，用户进程其实是需要不断的主动询问kernel数据好了没有。**
 
 **IO multiplexing**
 
 IO multiplexing这个词可能有点陌生，但是如果我说select，epoll，大概就都能明白了。有些地方也称这种IO方式为event driven IO。我们都知道，select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。它的流程如图：  
-![](http://upload-images.jianshu.io/upload_images/3985563-989498cf42790083.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-989498cf42790083.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 当用户进程调用了select，那么整个进程会被block，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。
 
@@ -170,7 +170,7 @@ IO multiplexing这个词可能有点陌生，但是如果我说select，epoll，
 **Asynchronous I/O**
 
 UNIX下的asynchronous IO其实用得很少。先看一下它的流程：  
-![](http://upload-images.jianshu.io/upload_images/3985563-39b98967390db195.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+![](https://upload-images.jianshu.io/upload_images/3985563-39b98967390db195.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
 **用户进程发起read操作之后，立刻就可以开始去做其它的事。** 而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。**然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。**
 
 到目前为止，已经将四个IO Model都介绍完了。现在回过头来回答最初的那几个问题：
@@ -189,7 +189,7 @@ UNIX下的asynchronous IO其实用得很少。先看一下它的流程：
 有人可能会说，non-blocking IO并没有被block啊。这里有个非常“狡猾”的地方，定义中所指的”IO operation”是指真实的IO操作，就是例子中的recvfrom这个system call。non-blocking IO在执行recvfrom这个system call的时候，如果kernel的数据没有准备好，这时候不会block进程。但是，当kernel中数据准备好的时候，recvfrom会将数据从kernel拷贝到用户内存中，这个时候进程是被block了，在这段时间内，进程是被block的。而asynchronous IO则不一样，当进程发起IO 操作之后，就直接返回再也不理睬了，直到kernel发送一个信号，告诉进程说IO完成。在这整个过程中，进程完全没有被block。
 
 各个IO Model的比较如图所示：  
-![](http://upload-images.jianshu.io/upload_images/3985563-3f7ade558f749a61.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-3f7ade558f749a61.gif?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 经过上面的介绍，会发现non-blocking IO和asynchronous IO的区别还是很明显的。在non-blocking IO中，虽然进程大部分时间都不会被block，但是它仍然要求进程去主动的check，并且当数据准备完成以后，也需要进程主动的再次调用recvfrom来将数据拷贝到用户内存。而asynchronous IO则完全不同。它就像是用户进程将整个IO操作交给了他人（kernel）完成，然后他人做完后发信号通知。在此期间，用户进程不需要去检查IO操作的状态，也不需要主动的去拷贝数据。
 
@@ -210,8 +210,8 @@ UNIX下的asynchronous IO其实用得很少。先看一下它的流程：
 
 最后，在Java 7中增加了asynchronous IO，具体结构和实现类框架如下：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-9c964a961f51edd2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
-篇幅有限，具体使用可以看这篇文章：[Java 学习之路 之 基于TCP协议的网络编程（八十二）](http://www.ithao123.cn/content-7365943.html)。
+![](https://upload-images.jianshu.io/upload_images/3985563-9c964a961f51edd2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+篇幅有限，具体使用可以看这篇文章：[Java 学习之路 之 基于TCP协议的网络编程（八十二）](https://www.ithao123.cn/content-7365943.html)。
 
 ### 六、Selector使用
 
@@ -220,7 +220,7 @@ Selector是Java NIO中的一个组件，用于检查一个或多个NIO Channel�
 通过上面的了解我们知道Selector是一种IO multiplexing的情况。
 
 下面这幅图描述了单线程处理三个channel的情况：  
-![](http://upload-images.jianshu.io/upload_images/3985563-e4e2f7a65dd0ce80.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-e4e2f7a65dd0ce80.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 ##### 创建Selector\(Creating a Selector\)。创建一个Selector可以通过Selector.open\(\)方法：
 

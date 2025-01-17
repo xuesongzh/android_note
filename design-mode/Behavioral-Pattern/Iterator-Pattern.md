@@ -4,7 +4,7 @@
 
 ### 二、迭代器模式结构
 
-![](http://upload-images.jianshu.io/upload_images/3985563-7a93b70924fbcc50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240/format/jpg)
+![](https://upload-images.jianshu.io/upload_images/3985563-7a93b70924fbcc50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240/format/jpg)
 
   
 

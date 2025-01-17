@@ -13,7 +13,7 @@
 策略模式是对算法的包装，是把调用算法的责任（行为）和算法本身（行为实现）分割开来，委派给不同的对象管理。策略模式通常把一个系列的算法包装到一系列的策略类里面，作为一个抽象策略类的子类。用一句话来说，就是：“准备一组算法，并将每一个算法封装起来，使得它们可以互换”。下面就以一个示意性的实现讲解策略模式实例的结构。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-b97fa59581b3c88c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-b97fa59581b3c88c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -42,7 +42,7 @@
 　　使用策略模式来实现的结构图如下：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-3fcb880d2e7c5e2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-3fcb880d2e7c5e2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -172,7 +172,7 @@ public class Price {
 　　这其实也是典型的将代码向继承等级结构的上方集中的标准做法。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-398483227b01f042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-398483227b01f042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

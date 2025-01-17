@@ -8,7 +8,7 @@
 
  浅拷贝是按位拷贝对象，它会创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是内存地址（引用类型），拷贝的就是内存地址 ，因此如果其中一个对象改变了这个地址，就会影响到另一个对象。
 
-​           ![img](http://static.oschina.net/uploads/space/2014/0308/140424_Fgpb_941605.png)
+​           ![img](https://static.oschina.net/uploads/space/2014/0308/140424_Fgpb_941605.png)
 
 在上图中，SourceObject有一个int类型的属性 "field1"和一个引用类型属性"refObj"（引用ContainedObject类型的对象）。当对SourceObject做浅拷贝时，创建了CopiedObject，它有一个包含"field1"拷贝值的属性"field2"以及仍指向refObj本身的引用。由于"field1"是基本类型，所以只是将它的值拷贝给"field2"，但是由于"refObj"是一个引用类型, 所以CopiedObject指向"refObj"相同的地址。因此对SourceObject中的"refObj"所做的任何改变都会影响到CopiedObject。
 
@@ -124,7 +124,7 @@ Cloned Object after updating original object: John - Physics
 
 深拷贝会拷贝所有的属性,并拷贝属性指向的动态分配的内存。当对象和它所引用的对象一起拷贝时即发生深拷贝。深拷贝相比于浅拷贝速度较慢并且花销较大。
 
-​            ![img](http://static.oschina.net/uploads/space/2014/0308/141515_I45m_941605.png)
+​            ![img](https://static.oschina.net/uploads/space/2014/0308/141515_I45m_941605.png)
 
 在上图中，SourceObject有一个int类型的属性 "field1"和一个引用类型属性"refObj1"（引用ContainedObject类型的对象）。当对SourceObject做深拷贝时，创建了CopiedObject，它有一个包含"field1"拷贝值的属性"field2"以及包含"refObj1"拷贝值的引用类型属性"refObj2" 。因此对SourceObject中的"refObj"所做的任何改变都不会影响到CopiedObject
 

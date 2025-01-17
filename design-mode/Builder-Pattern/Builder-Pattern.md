@@ -13,11 +13,11 @@
 - Director：指挥者
 - Product：产品角色
 
-![](http://design-patterns.readthedocs.io/zh_CN/latest/_images/Builder.jpg)
+![](https://design-patterns.readthedocs.io/zh_CN/latest/_images/Builder.jpg)
 
 ## 三、时序图
 
-![](http://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_Builder.jpg)
+![](https://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_Builder.jpg)
 
 ## 四、简单实现
 

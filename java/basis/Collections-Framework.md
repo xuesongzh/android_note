@@ -11,13 +11,13 @@ Java集合就像一种容器，可以把多个对象（实际上是对象的引�
 ### 2.Java集合类之间的继承关系:
 Java的集合类主要由两个接口派生而出：Collection和Map,Collection和Map是Java集合框架的根接口。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-e7febf364d8d8235.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-e7febf364d8d8235.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 图中，ArrayList,HashSet,LinkedList,TreeSet是我们经常会有用到的已实现的集合类。
 
 Map实现类用于保存具有映射关系的数据。Map保存的每项数据都是key-value对，也就是由key和value两个值组成。Map里的key是不可重复的，key用户标识集合里的每项数据。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-06052107849a7603.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-06052107849a7603.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 图中，HashMap，TreeMap是我们经常会用到的集合类。
 
@@ -25,7 +25,7 @@ Map实现类用于保存具有映射关系的数据。Map保存的每项数据�
 ### 1.简介
 Collection接口是Set,Queue,List的父接口。Collection接口中定义了多种方法可供其子类进行实现，以实现数据操作。由于方法比较多，就偷个懒，直接把JDK文档上的内容搬过来。
 #### 1.1.接口中定义的方法
-![](http://upload-images.jianshu.io/upload_images/3985563-414332ffe4733274.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-414332ffe4733274.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 可以看出Collection用法有：添加元素，删除元素，返回Collection集合的个数以及清空集合等。
 其中重点介绍iterator()方法，该方法的返回值是Iterator<E>。
@@ -34,7 +34,7 @@ Collection接口是Set,Queue,List的父接口。Collection接口中定义了多�
 Iterator接口经常被称作迭代器，它是Collection接口的父接口。但Iterator主要用于遍历集合中的元素。
 Iterator接口中主要定义了2个方法：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-63737a2d81713a47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-63737a2d81713a47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 下面程序简单示范了通过Iterator对象逐个获取元素的逻辑。
 
@@ -141,14 +141,14 @@ List作为Collection接口的子接口，可以使用Collection接口里的全�
 Queue用户模拟队列这种数据结构，队列通常是指“先进先出”(FIFO，first-in-first-out)的容器。队列的头部是在队列中存放时间最长的元素，队列的尾部是保存在队列中存放时间最短的元素。新元素插入（offer）到队列的尾部，访问元素（poll）操作会返回队列头部的元素。通常，队列不允许随机访问队列中的元素。
 #### 4.2.接口中定义的方法
 
-![](http://upload-images.jianshu.io/upload_images/3985563-0505554930ca982e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-0505554930ca982e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ## 三、Map集合
 ### 1.简介
 Map用户保存具有映射关系的数据，因此Map集合里保存着两组数，一组值用户保存Map里的key,另一组值用户保存Map里的value，key和value都可以是任何引用类型的数据。Map的key不允许重复，即同一个Map对象的任何两个key通过equals方法比较总是返回false。
 
 如下图所描述，key和value之间存在单向一对一关系，即通过指定的key,总能找到唯一的、确定的value。从Map中取出数据时，只要给出指定的key，就可以取出对应的value。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-51f6c5278df941fe.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-51f6c5278df941fe.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2.Map集合与Set集合、List集合的关系
 **①.与Set集合的关系**
@@ -160,11 +160,11 @@ Map用户保存具有映射关系的数据，因此Map集合里保存着两组�
 如果把Map里的所有value放在一起来看，它们又非常类似于一个List：元素与元素之间可以重复，每个元素可以根据索引来查找，只是Map中索引不再使用整数值，而是以另外一个对象作为索引。
 
 ### 3.接口中定义的方法
-![](http://upload-images.jianshu.io/upload_images/3985563-d2494516e1d68a6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-d2494516e1d68a6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Map中还包括一个内部类Entry，该类封装了一个key-value对。Entry包含如下三个方法：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-ecedd1880af9d40a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-ecedd1880af9d40a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Map集合最典型的用法就是成对地添加、删除key-value对，然后就是判断该Map中是否包含指定key，是否包含指定value，也可以通过Map提供的keySet()方法获取所有key组成的集合，然后使用foreach循环来遍历Map的所有key，根据key即可遍历所有的value。下面程序代码示范Map的一些基本功能：
 

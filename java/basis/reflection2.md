@@ -12,7 +12,7 @@
 代理模式的角色分四种：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-f4d339a69a8b9e92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-f4d339a69a8b9e92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

@@ -9,7 +9,7 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按运行地点分类：**  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-af63266f00ae1fbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-af63266f00ae1fbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -18,7 +18,7 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按运行类型分类：**  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-87972eef7c1b435a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-87972eef7c1b435a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -27,14 +27,14 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按使用方式分类：**  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-2c6f9875b470540a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-2c6f9875b470540a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
 
 ### 三、Service生命周期
 
-![](http://upload-images.jianshu.io/upload_images/3985563-85614addbbec7a0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-85614addbbec7a0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

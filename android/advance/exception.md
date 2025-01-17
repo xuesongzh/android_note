@@ -69,7 +69,7 @@ public class CrashApplication extends Application {
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"  
+<manifest xmlns:android="https://schemas.android.com/apk/res/android"  
     package="org.wp.activity" android:versionCode="1" android:versionName="1.0">  
     <application android:icon="@drawable/icon" android:label="@string/app_name"  
         android:name=".CrashApplication" android:debuggable="true">  

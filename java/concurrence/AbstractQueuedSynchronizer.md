@@ -14,7 +14,7 @@ java.util.concurrent.locks.AbstractQueuedSynchronizer.compareAndSetState(int, in
 
 ### 1.2 AQS用处
 
-[![img](http://luojinping.com/img/AQS_uses.jpg)](http://luojinping.com/img/AQS_uses.jpg)
+[![img](https://luojinping.com/img/AQS_uses.jpg)](https://luojinping.com/img/AQS_uses.jpg)
 
 ### 1.3 同步器与锁
 
@@ -33,29 +33,29 @@ Node {
 
 以上五个成员变量主要负责保存该节点的线程引用，同步等待队列（以下简称sync队列）的前驱和后继节点，同时也包括了同步状态。
 
-| 属性名称            | 描述                                       |
-| --------------- | ---------------------------------------- |
+| 属性名称        | 描述                                                                                                                                                                                                                                                                                                                                          |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | int waitStatus  | 表示节点的状态。其中包含的状态有： CANCELLED，值为1，表示当前的线程被取消；SIGNAL，值为-1，表示当前节点的后继节点包含的线程需要运行，也就是unpark；CONDITION，值为-2，表示当前节点在等待condition，也就是在condition队列中；PROPAGATE，值为-3，表示当前场景下后续的acquireShared能够得以执行；值为0，表示当前节点在sync队列中，等待着获取锁。 |
-| Node prev       | 前驱节点，比如当前节点被取消，那就需要前驱节点和后继节点来完成连接。       |
-| Node next       | 后继节点。                                    |
-| Node nextWaiter | 存储condition队列中的后继节点。                     |
-| Thread thread   | 入队列时的当前线程。                               |
+| Node prev       | 前驱节点，比如当前节点被取消，那就需要前驱节点和后继节点来完成连接。                                                                                                                                                                                                                                                                          |
+| Node next       | 后继节点。                                                                                                                                                                                                                                                                                                                                    |
+| Node nextWaiter | 存储condition队列中的后继节点。                                                                                                                                                                                                                                                                                                               |
+| Thread thread   | 入队列时的当前线程。                                                                                                                                                                                                                                                                                                                          |
 
 节点成为sync队列和condition队列构建的基础，在同步器中就包含了sync队列。同步器拥有三个成员变量：sync队列的头结点head、sync队列的尾节点tail和状态state。对于锁的获取，请求形成节点，将其挂载在尾部，而锁资源的转移（释放再获取）是从头部开始向后进行。对于同步器维护的状态state，多个线程对其的获取将会产生一个链式的结构。
 
-[![img](http://ifeve.com/wp-content/uploads/2013/10/21.png)](http://ifeve.com/wp-content/uploads/2013/10/21.png)
+[![img](https://ifeve.com/wp-content/uploads/2013/10/21.png)](https://ifeve.com/wp-content/uploads/2013/10/21.png)
 
 ### 1.4 API说明
 
 实现自定义同步器时，需要使用同步器提供的getState()、setState()和compareAndSetState()方法来操纵状态的变迁。
 
-| 方法名称                                     | 描述                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| protected boolean tryAcquire(int arg)    | 排它的获取这个状态。这个方法的实现需要查询当前状态是否允许获取，然后再进行获取（使用compareAndSetState来做）状态。 |
-| protected boolean tryRelease(int arg)    | 释放状态。                                    |
-| protected int tryAcquireShared(int arg)  | 共享的模式下获取状态。                              |
-| protected boolean tryReleaseShared(int arg) | 共享的模式下释放状态。                              |
-| protected boolean isHeldExclusively()    | 在排它模式下，状态是否被占用。                          |
+| 方法名称                                    | 描述                                                                                                               |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| protected boolean tryAcquire(int arg)       | 排它的获取这个状态。这个方法的实现需要查询当前状态是否允许获取，然后再进行获取（使用compareAndSetState来做）状态。 |
+| protected boolean tryRelease(int arg)       | 释放状态。                                                                                                         |
+| protected int tryAcquireShared(int arg)     | 共享的模式下获取状态。                                                                                             |
+| protected boolean tryReleaseShared(int arg) | 共享的模式下释放状态。                                                                                             |
+| protected boolean isHeldExclusively()       | 在排它模式下，状态是否被占用。                                                                                     |
 
 实现这些方法必须是非阻塞而且是线程安全的，推荐使用该同步器的父类java.util.concurrent.locks.AbstractOwnableSynchronizer来设置当前的线程。
 开始提到同步器内部基于一个FIFO队列，对于一个独占锁的获取和释放有以下伪码可以表示。
@@ -268,7 +268,7 @@ final boolean acquireQueued(final Node node, int arg) {
    这时引入的一个释放的问题，也就是说使睡眠中的Node或者说线程获得通知的关键，就是前驱节点的通知，而这一个过程就是释放，释放会通知它的后继节点从睡眠中返回准备运行。
    下面的流程图基本描述了一次acquire所需要经历的过程：
 
-[![img](http://img2.tbcdn.cn/L1/461/1/t_9683_1379328542_928191748.png)](http://img2.tbcdn.cn/L1/461/1/t_9683_1379328542_928191748.png)
+[![img](https://img2.tbcdn.cn/L1/461/1/t_9683_1379328542_928191748.png)](https://img2.tbcdn.cn/L1/461/1/t_9683_1379328542_928191748.png)
 
 如上图所示，其中的判定退出队列的条件，判定条件是否满足和休眠当前线程就是完成了自旋spin的过程。
 
@@ -432,7 +432,7 @@ throws InterruptedException {
    唤醒后的线程，计算仍需要休眠的时间，并无阻塞的尝试再获取状态，如果失败后查看其nanosTimeout是否大于0，如果小于0，那么返回完全超时，没有获取到锁。 如果nanosTimeout小于等于1000L纳秒，则进入快速的自旋过程。那么快速自旋会造成处理器资源紧张吗？结果是不会，经过测算，开销看起来很小，几乎微乎其微。Doug Lea应该测算了在线程调度器上的切换造成的额外开销，因此在短时1000纳秒内就让当前线程进入快速自旋状态，如果这时再休眠相反会让nanosTimeout的获取时间变得更加不精确。
    上述过程可以如下图所示：
 
-[![img](http://img2.tbcdn.cn/L1/461/1/t_9683_1379328891_568034081.png)](http://img2.tbcdn.cn/L1/461/1/t_9683_1379328891_568034081.png)
+[![img](https://img2.tbcdn.cn/L1/461/1/t_9683_1379328891_568034081.png)](https://img2.tbcdn.cn/L1/461/1/t_9683_1379328891_568034081.png)
 
 上述这个图中可以理解为在类似获取状态需要排队的基础上增加了一个超时控制的逻辑。每次超时的时间就是当前超时剩余的时间减去睡眠的时间，而在这个超时时间的基础上进行了判断，如果大于0那么继续睡眠（等待），可以看出这个超时版本的获取状态只是一个近似超时的获取状态，因此任何含有超时的调用基本结果就是近似于给定超时。
 
@@ -444,7 +444,7 @@ public final void acquireShared(int arg)
 调用该方法能够以共享模式获取状态，共享模式和之前的独占模式有所区别。以文件的查看为例，如果一个程序在对其进行读取操作，那么这一时刻，对这个文件的写操作就被阻塞，相反，这一时刻另一个程序对其进行同样的读操作是可以进行的。如果一个程序在对其进行写操作，那么所有的读与写操作在这一时刻就被阻塞，直到这个程序完成写操作。
 以读写场景为例，描述共享和独占的访问模式，如下图所示：
 
-[![img](http://img1.tbcdn.cn/L1/461/1/t_9683_1379328959_1702388031.png)](http://img1.tbcdn.cn/L1/461/1/t_9683_1379328959_1702388031.png)
+[![img](https://img1.tbcdn.cn/L1/461/1/t_9683_1379328959_1702388031.png)](https://img1.tbcdn.cn/L1/461/1/t_9683_1379328959_1702388031.png)
 
 上图中，红色代表被阻塞，绿色代表可以通过。
 
@@ -496,7 +496,7 @@ parkAndCheckInterrupt())
    通过使用LockSupport将当前线程从线程调度器上摘下，进入休眠状态。
    对于上述逻辑中，节点之间的通知过程如下图所示：
 
-[![img](http://img1.tbcdn.cn/L1/461/1/t_9683_1379329217_1542967524.png)](http://img1.tbcdn.cn/L1/461/1/t_9683_1379329217_1542967524.png)
+[![img](https://img1.tbcdn.cn/L1/461/1/t_9683_1379329217_1542967524.png)](https://img1.tbcdn.cn/L1/461/1/t_9683_1379329217_1542967524.png)
 
 上图中，绿色表示共享节点，它们之间的通知和唤醒操作是在前驱节点获取状态时就进行的，红色表示独占节点，它的被唤醒必须取决于前驱节点的释放，也就是release操作，可以看出来图中的独占节点如果要运行，必须等待前面的共享节点均释放了状态才可以。而独占节点如果获取了状态，那么后续的独占式获取和共享式获取均被阻塞。
 

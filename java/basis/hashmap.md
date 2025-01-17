@@ -37,7 +37,7 @@ for(Entry<String, Integer> entry : map.entrySet()) {
 > 地理: 6
 
 发生了什么呢？下面是一个大致的结构，希望我们对HashMap的结构有一个感性的认识：  
-![](https://cloud.githubusercontent.com/assets/1736354/6957741/0c039b1c-d933-11e4-8c1e-7558a8766272.png "hashmap")
+![](httpss://cloud.githubusercontent.com/assets/1736354/6957741/0c039b1c-d933-11e4-8c1e-7558a8766272.png "hashmap")
 
 在官方文档中是这样描述HashMap的：
 
@@ -175,7 +175,7 @@ final Node<K,V> getNode(int hash, Object key) {
 ## 五、hash函数的实现
 
 在get和put的过程中，计算下标时，先对hashCode进行hash操作，然后再通过hash值进一步计算下标，如下图所示：  
-![](https://cloud.githubusercontent.com/assets/1736354/6957712/293b52fc-d932-11e4-854d-cb47be67949a.png "hash")
+![](httpss://cloud.githubusercontent.com/assets/1736354/6957712/293b52fc-d932-11e4-854d-cb47be67949a.png "hash")
 
 在对hashCode\(\)计算hash时具体实现是这样的：
 
@@ -200,7 +200,7 @@ static final int hash(Object key) {
 
 因此，设计者想了一个顾全大局的方法\(综合考虑了速度、作用、质量\)，就是把高16bit和低16bit异或了一下。设计者还解释到因为现在大多数的hashCode的分布已经很不错了，就算是发生了碰撞也用`O(logn)`的tree去做了。仅仅异或一下，既减少了系统的开销，也不会造成的因为高位没有参与下标的计算\(table长度比较小时\)，从而引起的碰撞。
 
-如果还是产生了频繁的碰撞，会发生什么问题呢？作者注释说，他们使用树来处理频繁的碰撞\(we use trees to handle large sets of collisions in bins\)，在[JEP-180](http://openjdk.java.net/jeps/180)中，描述了这个问题：
+如果还是产生了频繁的碰撞，会发生什么问题呢？作者注释说，他们使用树来处理频繁的碰撞\(we use trees to handle large sets of collisions in bins\)，在[JEP-180](https://openjdk.java.net/jeps/180)中，描述了这个问题：
 
 > Improve the performance of java.util.HashMap under high hash-collision conditions by**using balanced trees rather than linked lists to store map entries**. Implement the same improvement in the LinkedHashMap class.
 
@@ -211,7 +211,7 @@ static final int hash(Object key) {
 
 在Java 8之前的实现中是用链表解决冲突的，在产生碰撞的情况下，进行get时，两步的时间复杂度是O\(1\)+O\(n\)。因此，当碰撞很厉害的时候n很大，O\(n\)的速度显然是影响速度的。
 
-因此在Java 8中，利用红黑树替换链表，这样复杂度就变成了O\(1\)+O\(logn\)了，这样在n很大的时候，能够比较理想的解决这个问题，在[Java 8：HashMap的性能提升](http://www.importnew.com/14417.html)一文中有性能测试的结果。
+因此在Java 8中，利用红黑树替换链表，这样复杂度就变成了O\(1\)+O\(logn\)了，这样在n很大的时候，能够比较理想的解决这个问题，在[Java 8：HashMap的性能提升](https://www.importnew.com/14417.html)一文中有性能测试的结果。
 
 ## 六、RESIZE的实现
 

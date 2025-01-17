@@ -37,7 +37,7 @@ Java堆中会划分出一块内存来作为句柄池，reference中存储的就�
   
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-f5713460d22b0148.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-f5713460d22b0148.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -50,7 +50,7 @@ reference中存储的直接就是对象地址。
   
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-306321689e5f047d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-306321689e5f047d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

@@ -10,7 +10,7 @@
 
 模板方法所代表的行为称为顶级行为，其逻辑称为顶级逻辑。模板方法模式的静态结构图如下所示：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-05618f06dfa3ab58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-05618f06dfa3ab58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -115,7 +115,7 @@ public class ConcreteTemplate extends AbstractTemplate{
 
 显然，系统需要一个抽象角色给出顶级行为的实现，而将两个作为细节步骤的基本方法留给具体子类实现。由于需要考虑的账号有两种：一是货币市场账号，二是定期存款账号。系统的类结构如下图所示。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-fd074443f7382c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-fd074443f7382c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

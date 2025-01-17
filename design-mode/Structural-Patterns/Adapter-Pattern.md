@@ -18,7 +18,7 @@
 
 类的适配器模式把适配的类的API转换成为目标类的API。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-77548c0670a6bd50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-77548c0670a6bd50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -77,7 +77,7 @@ public class Adapter extends Adaptee implements Target {
 
 与类的适配器模式一样，对象的适配器模式把被适配的类的API转换成为目标类的API，与类的适配器模式不同的是，对象的适配器模式不是使用继承关系连接到Adaptee类，而是使用委派关系连接到Adaptee类。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-202c3c1af705b68e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-202c3c1af705b68e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -132,7 +132,7 @@ public class Adapter {
 
 ##### 时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-7d3c2c89d8d28c6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-7d3c2c89d8d28c6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

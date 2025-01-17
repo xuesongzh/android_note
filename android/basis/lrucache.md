@@ -39,7 +39,7 @@ LruCache的核心思想很好理解，就是要维护一个缓存对象列表，
 
 如下图所示：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-33560a9500e72780.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-33560a9500e72780.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 那么这个队列到底是由谁来维护的，前面已经介绍了是由LinkedHashMap来维护。
 

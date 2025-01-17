@@ -18,7 +18,7 @@
 
 因为Fragment是依附于Activity存在的，因此它的生命周期收到Activity的生命周期影响
 
-![](http://upload-images.jianshu.io/upload_images/1780352-f8584bc70f3c149c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1780352-f8584bc70f3c149c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Fragment比Activity多了几个生命周期的回调方法
 
@@ -45,7 +45,7 @@ PS：注意：除了onCreateView，其他的所有方法如果你重写了，必
 MyFragment对应的布局文件item_fragment.xml
 
 ```xml
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -79,8 +79,8 @@ public class MyFragment extends Fragment {
 Activity对应的布局文件
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
+    xmlns:tools="https://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -103,7 +103,7 @@ Activity对应的布局文件
 
 运行效果图
 
-![](http://upload-images.jianshu.io/upload_images/1780352-bd36369dc712c754.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1780352-bd36369dc712c754.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **动态使用Fragment**
 
@@ -114,7 +114,7 @@ Activity对应的布局文件
 Fragment对应的布局文件item_fragment.xml
 
 ```xml
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:background="@color/colorAccent" //背景红色
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -142,7 +142,7 @@ public class MyFragment extends Fragment {
 Fragment2对应的布局文件item_fragment2.xml
 
 ```Xml
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:background="@color/colorPrimary" //背景蓝色
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -172,8 +172,8 @@ MainActivity对应的布局文件
 
 ```xml
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
+    xmlns:tools="https://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -261,15 +261,15 @@ public class MainActivity extends AppCompatActivity {
 
 默认显示
 
-![](http://upload-images.jianshu.io/upload_images/1780352-03b001ae2419fc28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1780352-03b001ae2419fc28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 点击BLUE按钮时
 
-![](http://upload-images.jianshu.io/upload_images/1780352-f8889a725e75253f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1780352-f8889a725e75253f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 点击RED按钮时
 
-![](http://upload-images.jianshu.io/upload_images/1780352-5a447a4ea3bdbb5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1780352-5a447a4ea3bdbb5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 以上代码我写的比较臃肿但是比较容易看明白：
 
@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
 
   首先来看一下这个东西：
 
-![](http://upload-images.jianshu.io/upload_images/1780352-611dd683eec287c2.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1780352-611dd683eec287c2.gif?imageMogr2/auto-orient/strip)
 
 - 首先显示第一个FragmentOne页面有一个Button in FragmentOne，上面有个输入框显示的是Fragment One
 -  然后输入change，点击Button in FragmentOne，然后显示第二个Fragment，里面有一个Button in FragmentTwo，一个输入框显示Fragment Two
@@ -318,8 +318,8 @@ public class MainActivity extends AppCompatActivity {
 MainActivity的布局文件
 
 ```Xml
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-    xmlns:tools="http://schemas.android.com/tools"  
+<RelativeLayout xmlns:android="https://schemas.android.com/apk/res/android"  
+    xmlns:tools="https://schemas.android.com/tools"  
     android:layout_width="match_parent"  
     android:layout_height="match_parent" >  
 

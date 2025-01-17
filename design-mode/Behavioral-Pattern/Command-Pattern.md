@@ -14,7 +14,7 @@
 
 下面以一个示意性的系统，说明命令模式的结构。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-bbf7bae7e154f99e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-bbf7bae7e154f99e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -34,7 +34,7 @@
 
 ##### 时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-8a26d6fcdcd54681.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-8a26d6fcdcd54681.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -135,7 +135,7 @@ public class Client {
 
 录音机是典型的命令模式。录音机按键把客户端与录音机的操作细节分割开来。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-06164eab0f8bab61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-06164eab0f8bab61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -289,7 +289,7 @@ public class Julia {
 
 运行结果：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-bbaebe65abaca3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-bbaebe65abaca3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -302,7 +302,7 @@ public class Julia {
 设想茱丽的录音机有一个记录功能，**可以把一个一个的命令记录下来，再在任何需要的时候重新把这些记录下来的命令一次性执行**，这就是所谓的宏命令集功能。因此，茱丽的录音机系统现在有四个键，分别为播音、倒带、停止和宏命令功能。此时系统的设计与前面的设计相比有所增强，主要体现在Julia类现在有了一个新方法，用以操作宏命令键。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-b8369476077da323.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-b8369476077da323.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

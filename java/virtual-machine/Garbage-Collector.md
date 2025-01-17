@@ -12,7 +12,7 @@
 
 空间问题：标记清除之后产生大量不连续的内存碎片，空间碎片太多可能会导致以后程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1b31d5ebe8dec659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1b31d5ebe8dec659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2.复制算法
 
@@ -22,7 +22,7 @@
 
 **缺点：** 将内存缩小为了原来的一半。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1b7d8f53a44cdfdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1b7d8f53a44cdfdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 现代的商业虚拟机都采用这种收集算法来回收新生代，IBM公司的专门研究表明，新生代中对象98%对象是“朝生夕死”的，所以不需要按照1：1的比例来划分内存空间，而是**将内存分为较大的Eden空间和两块较小的Survivor空间，每次使用Eden和其中一块Survivor。HotSpot虚拟机中默认Eden和Survivor的大小比例是8：1。**
 
@@ -33,7 +33,7 @@
 
 标记过程仍然与”标记-清除“算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉边界以外的内存。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1bd60604e0c0f46a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1bd60604e0c0f46a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 4.分代收集算法
 
@@ -69,7 +69,7 @@ Full GC/Major GC:指发生在老年代的垃圾收集动作，出现了Major GC�
 
 ## 三、垃圾收集器
 
-![](http://upload-images.jianshu.io/upload_images/3985563-89c627b9a5ed3b52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-89c627b9a5ed3b52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 上图展示了7种作用于不同分代的收集器，如果两个收集器之间存在连线，说明它们可以搭配使用。
 
@@ -77,7 +77,7 @@ Full GC/Major GC:指发生在老年代的垃圾收集动作，出现了Major GC�
 
  是最基本、发展历史最悠久的收集器。这是一个**单线程收集器**。但它的“单线程”的意义并不仅仅说明它只会使用一个CPU或一条收集线程去完成垃圾收集工作，更重要的是它在进行垃圾收集时，必须暂停其他所有的工作线程，直到它收集结束。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-afe8d052d4dcefcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-afe8d052d4dcefcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 是虚拟机运行在Client模式下的默认新生代收集器。
 
@@ -91,7 +91,7 @@ ParNew收集器其实就是Serial收集器的多线程版本。
 ParNew收集器默认开启的收集线程数与CPU的数量相同。
 下图是ParNew/Serial Old收集器运行示意图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-5ffaf4ea185e9ebe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-5ffaf4ea185e9ebe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3.Parallel Scavenge收集器
 Parallel Scavenge收集器是一个新生代收集器，使用复制算法，又是并行的多线程收集器。
@@ -102,7 +102,7 @@ Parallel Scavenge收集器是一个新生代收集器，使用复制算法，又
 
 高吞吐量则可以高效率地利用CPU时间，尽快完成程序的运算任务，**主要适合在后台运算而不需要太多交互的任务。**
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1daa41ac008cadf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1daa41ac008cadf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 4.Serial Old收集器
 Serial Old是Serial收集器的老年代版本，同样是一个单线程收集器，使用“标记-整理”算法。这个收集器的主要意义也是在于给Client模式下虚拟机使用。
@@ -137,7 +137,7 @@ CMS收集器是基于“标记-清除”算法实现的，**整个过程分为4�
 
 整个过程耗时最长的阶段是并发标记，并发清除过程，但这两个过程可以和用户线程一起工作。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-e2e96b26402033da.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-e2e96b26402033da.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **缺点：**
 

@@ -8,7 +8,7 @@ IntentService是Android里面的一个封装类，继承自四大组件之一的
 
 ## 三、 工作流程
 
-![](http://upload-images.jianshu.io/upload_images/944365-fa5bfe6dffa531ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-fa5bfe6dffa531ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 注意：若启动IntentService多次，那么每个耗时操作则以队列的方式在IntentService的onHandleIntent回调方法中依次执行，执行完自动结束。
 
@@ -123,7 +123,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 - 结果
 
-  ![](http://upload-images.jianshu.io/upload_images/944365-fadf671e3671b52a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  ![](https://upload-images.jianshu.io/upload_images/944365-fadf671e3671b52a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 六、源码分析
 

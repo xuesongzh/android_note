@@ -53,7 +53,7 @@ public class Person {
 
 调用info\(\)方法会编译器会出现警告，告知该方法已过时。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-4ec2d9c0b02330ee.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+![](https://upload-images.jianshu.io/upload_images/3985563-4ec2d9c0b02330ee.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
 注解类型分析：` @Deprecated`可适合用于除注解类型声明之外的所有元素，保留时长为运行时。
 
 **@SuppressWarnings**  
@@ -67,7 +67,7 @@ public class Person {
 @SupressWarning(value={"uncheck","deprecation"})
 ```
 
-![](http://upload-images.jianshu.io/upload_images/3985563-24e39cdaf0d62c75.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-24e39cdaf0d62c75.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **@FunctionalInterface**  
 用途：用户告知编译器，检查这个接口，保证该接口是函数式接口，即只能包含一个抽象方法，否则就会编译出错。
@@ -113,12 +113,12 @@ public String(byte[] ascii,int hibyte,int offset, int count)
 **@Retention**
 
 `@Retention`：表示该注解类型的注解保留的时长。当注解类型声明中没有`@Retention`元注解，则默认保留策略为RetentionPolicy.CLASS。关于保留策略\(RetentionPolicy\)是枚举类型，共定义3种保留策略，如下表：  
-![](http://upload-images.jianshu.io/upload_images/3985563-828fe68fcdf834b4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-828fe68fcdf834b4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **@Target**
 
 `@Target`：表示该注解类型的所适用的程序元素类型。当注解类型声明中没有`@Target`元注解，则默认为可适用所有的程序元素。如果存在指定的`@Target`元注解，则编译器强制实施相应的使用限制。关于程序元素\(ElementType\)是枚举类型，共定义8种程序元素，如下表：  
-![](http://upload-images.jianshu.io/upload_images/3985563-7b457df2143fa5dd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-7b457df2143fa5dd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 ### 三、自定义注解（Annotation）
 
@@ -166,7 +166,7 @@ public class AnnotationDemo {
 ### 四、注解解析
 
 接下来，通过反射技术来解析自定义注解。关于反射类位于包java.lang.reflect，其中有一个接口AnnotatedElement，该接口主要有如下几个实现类：Class，Constructor，Field，Method，Package。除此之外，该接口定义了注释相关的几个核心方法，如下：  
-![](http://upload-images.jianshu.io/upload_images/3985563-4077bbaef5b27a4b.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
+![](https://upload-images.jianshu.io/upload_images/3985563-4077bbaef5b27a4b.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)  
 因此，当获取了某个类的Class对象，然后获取其Field,Method等对象，通过上述4个方法提取其中的注解，然后获得注解的详细信息。
 
 ```java

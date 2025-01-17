@@ -40,7 +40,7 @@
 
 先说短连接, 短连接是通讯双方有数据交互时就建立一个连接, 数据发送完成后，则断开此连接.
 
-![](http://upload-images.jianshu.io/upload_images/172542-f0fe8b9364fdfaad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/172542-f0fe8b9364fdfaad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 长连接就是大家建立连接之后, 不主动断开. 双方互相发送数据, 发完了也不主动断开连接, 之后有需要发送的数据就继续通过这个连接发送.
 
@@ -54,7 +54,7 @@ TCP连接在默认的情况下就是所谓的*长连接*, 也就是说连接双�
 
 NAT设备会在IP封包通过设备时修改源/目的IP地址. 对于家用路由器来说, 使用的是网络地址端口转换(NAPT), 它不仅改IP, 还修改TCP和UDP协议的端口号, 这样就能让内网中的设备共用同一个外网IP. 举个例子, NAPT维护一个类似下表的NAT表
 
-| 内网地址             | 外网地址               |
+| 内网地址         | 外网地址           |
 | ---------------- | ------------------ |
 | 192.168.0.2:5566 | 120.132.92.21:9200 |
 | 192.168.0.3:7788 | 120.132.92.21:9201 |
@@ -74,7 +74,7 @@ NAT设备会根据NAT表对出去和进来的数据做修改, 比如将`192.168.
 
 > 目前测试发现安卓系统对DHCP的处理有Bug, DHCP租期到了不会主动续约并且会继续使用过期IP, 这个问题会造成TCP长连接偶然的断连.
 >
-> 引自[Android微信智能心跳方案](http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=207243549&idx=1&sn=4ebe4beb8123f1b5ab58810ac8bc5994&scene=4#wechat_redirect)
+> 引自[Android微信智能心跳方案](https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=207243549&idx=1&sn=4ebe4beb8123f1b5ab58810ac8bc5994&scene=4#wechat_redirect)
 
 ### 心跳包的作用
 
@@ -105,7 +105,7 @@ NAT设备会根据NAT表对出去和进来的数据做修改, 比如将`192.168.
 
 wifi下, NAT超时时间都会比较长, 据说宽带的网关一般没有空闲释放机制, GCM有些时候在wifi下的心跳比在移动网络下的心跳要快, 可能是因为wifi下联网通信耗费的电量比移动网络下小.
 
-关于如何让心跳间隔逼近NAT超时的间隔, 同时自动适应NAT超时间隔的变化, 可以参看[Android微信智能心跳方案](http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=207243549&idx=1&sn=4ebe4beb8123f1b5ab58810ac8bc5994&scene=4#wechat_redirect).
+关于如何让心跳间隔逼近NAT超时的间隔, 同时自动适应NAT超时间隔的变化, 可以参看[Android微信智能心跳方案](https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=207243549&idx=1&sn=4ebe4beb8123f1b5ab58810ac8bc5994&scene=4#wechat_redirect).
 
 ### 服务器如何处理心跳包
 
@@ -133,7 +133,7 @@ wifi下, NAT超时时间都会比较长, 据说宽带的网关一般没有空闲
 >
 > 完全没必要担心AP休眠会导致收不到消息推送. 通讯协议栈运行于BP，一旦收到数据包, BP会将AP唤醒, 唤醒的时间足够AP执行代码完成对收到的数据包的处理过程. 其它的如Connectivity事件触发时AP同样会被唤醒. 那么唯一的问题就是程序如何执行向服务器发送心跳包的逻辑. 你显然不能靠AP来做心跳计时. Android提供的Alarm Manager就是来解决这个问题的. Alarm应该是BP计时(或其它某个带石英钟的芯片，不太确定，但绝对不是AP), 触发时唤醒AP执行程序代码. 那么Wake Lock API有啥用呢? 比如心跳包从请求到应答, 比如断线重连重新登陆这些关键逻辑的执行过程, 就需要Wake Lock来保护. 而一旦一个关键逻辑执行成功, 就应该立即释放掉Wake Lock了. 两次心跳请求间隔5到10分钟, 基本不会怎么耗电. 除非网络不稳定. 频繁断线重连, 那种情况办法不多.
 
-上面所说的通信协议, 我猜应该是无线资源控制协议(Radio Resource Control), RRC应该工作在OSI参考模型中的第三层网络层, 而TCP, UDP工作在第四层传输层, 上文说的BP, 应该就是手机中的基带, 也有叫Radio的, 我有点搞不清楚Radio怎么翻译. Google在[Optimizing Downloads for Efficient Network Access](http://developer.android.com/training/efficient-downloads/efficient-network-access.html#RadioStateMachine)中提到了一个叫Radio State Machine的东西, 我翻译成*无线电波状态机*, 也不知道正确的翻译是什么.
+上面所说的通信协议, 我猜应该是无线资源控制协议(Radio Resource Control), RRC应该工作在OSI参考模型中的第三层网络层, 而TCP, UDP工作在第四层传输层, 上文说的BP, 应该就是手机中的基带, 也有叫Radio的, 我有点搞不清楚Radio怎么翻译. Google在[Optimizing Downloads for Efficient Network Access](https://developer.android.com/training/efficient-downloads/efficient-network-access.html#RadioStateMachine)中提到了一个叫Radio State Machine的东西, 我翻译成*无线电波状态机*, 也不知道正确的翻译是什么.
 
 移动网络下, 每一个TCP连接底层都应该是有RRC连接, 而RRC连接会唤醒基带, 基带会唤醒CPU处理TCP数据, 这是我个人的理解.
 
@@ -145,7 +145,7 @@ wifi下, NAT超时时间都会比较长, 据说宽带的网关一般没有空闲
 
 ### 移动网络下的耗电
 
-Google在[Optimizing Downloads for Efficient Network Access](http://developer.android.com/training/efficient-downloads/efficient-network-access.html#RadioStateMachine)中提到了一个叫Radio State Machine的东西.
+Google在[Optimizing Downloads for Efficient Network Access](https://developer.android.com/training/efficient-downloads/efficient-network-access.html#RadioStateMachine)中提到了一个叫Radio State Machine的东西.
 
 mobile radio state machine
 

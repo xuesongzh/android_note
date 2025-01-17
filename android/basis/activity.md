@@ -7,7 +7,7 @@
 先上经典图片。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-a2caa08d3cbca003.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-a2caa08d3cbca003.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -59,7 +59,7 @@ onCreate\(\)-&gt;onStart\(\)-&gt;onResume\(\)-&gt;onPause\(\)-&gt;onStop\(\)-&gt
 在Activity由于异常情况下终止时，系统会调用onSaveInstanceState来保存当前Activity的状态。这个方法的调用是在onStop之前，它和onPause没有既定的时序关系，该方法只在Activity被异常终止的情况下调用。当异常终止的Activity被重建以后，系统会调用onRestoreInstanceState，并且把Activity销毁时onSaveInstanceState方法所保存的Bundle对象参数同时传递给onRestoreInstanceState和onCreate方法。因此，可以通过onRestoreInstanceState方法来恢复Activity的状态，该方法的调用时机是在onStart之后。**其中onCreate和onRestoreInstanceState方法来恢复Activity的状态的区别：** onRestoreInstanceState回调则表明其中Bundle对象非空，不用加非空判断。onCreate需要非空判断。建议使用onRestoreInstanceState。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-23d90471fa7f12d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-23d90471fa7f12d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -123,7 +123,7 @@ Android提供了四种Activity启动方式：
 Activity的管理是采用任务栈的形式，任务栈采用“后进先出”的栈结构。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-83df2c2b5d3afafd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-83df2c2b5d3afafd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -137,7 +137,7 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 例如：Activity A启动了Activity B，则就会在A所在的栈顶压入一个新的Activity。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-59e0c33aadd55f62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-59e0c33aadd55f62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -162,7 +162,7 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 如果栈顶不是新建的Activity,就会创建该Activity新的实例，并放入栈顶。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-6378dae7ea249294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-6378dae7ea249294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **应用场景：** 在通知栏点击收到的通知，然后需要启动一个Activity，这个Activity就可以用singleTop，否则每次点击都会新建一个Activity。当然实际的开发过程中，测试妹纸没准给你提过这样的bug：某个场景下连续快速点击，启动了两个Activity。如果这个时候待启动的Activity使用 singleTop模式也是可以避免这个Bug的。同standard模式，如果是外部程序启动singleTop的Activity，在Android 5.0之前新创建的Activity会位于调用者的Task中，5.0及以后会放入新的Task中。
 
@@ -187,17 +187,17 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 对应如下三种情况：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-2309a7222394cd80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-2309a7222394cd80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-b4e3dbc29cdb7da4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-b4e3dbc29cdb7da4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-4c1598adf8d53e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-4c1598adf8d53e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -210,7 +210,7 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 作为栈内复用模式（singleTask）的加强版,打开该Activity时，直接创建一个新的任务栈，并创建该Activity实例放入新栈中。一旦该模式的Activity实例已经存在于某个栈中，任何应用再激活该Activity时都会重用该栈中的实例。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-19d7d46af3e7acf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-19d7d46af3e7acf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -223,7 +223,7 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 假如目前有两个任务栈。前台任务栈为AB，后台任务栈为CD，这里假设CD的启动模式均为singleTask,现在请求启动D，那么这个后台的任务栈都会被切换到前台，这个时候整个后退列表就变成了ABCD。当用户按back返回时，列表中的activity会一一出栈，如下图。
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-4aeb1947bba27e44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-4aeb1947bba27e44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -232,7 +232,7 @@ Activity的管理是采用任务栈的形式，任务栈采用“后进先出”
 如果不是请求启动D而是启动C，那么情况又不一样，如下图。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-f2eaf1005cdf1b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-f2eaf1005cdf1b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

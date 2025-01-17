@@ -7,7 +7,7 @@
 下面是一个自定义的titlebar文件：
 
 ```xml
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/titlebar_bg">
@@ -23,7 +23,7 @@
 在应用中使用titlebar布局文件，我们通过<include/>标签,布局文件如下：
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -68,7 +68,7 @@
 下面通过一个简单的示例探讨一下<merge/>标签的使用，下面是嵌套布局的layout_text.xml文件：
 
 ```Xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -85,7 +85,7 @@
 一个线性布局中嵌套一个文本视图，主布局如下：
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:id="@+id/layout_wrap"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -102,12 +102,12 @@
 
 通过hierarchyviewer我们可以看到主布局View树的部分层级结构如下图：
 
-[![layout_merge01](http://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge01.png)](http://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge01.png)
+[![layout_merge01](https://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge01.png)](https://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge01.png)
 
 现在讲嵌套布局跟布局标签更改为<merge/>，merge_text.xml布局文件如下：
 
 ```xml
-<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+<merge xmlns:android="https://schemas.android.com/apk/res/android" >
  
     <TextView
         android:id="@+id/textView"
@@ -122,7 +122,7 @@
 
 然后将主布局<include/>标签中的layout更改为merge_text.xml，运行后重新截图如下:
 
-[![layout_merge02](http://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge02.png)](http://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge02.png)
+[![layout_merge02](https://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge02.png)](https://www.sunnyang.com/wp-content/uploads/2016/04/layout_merge02.png)
 
 对比截图就可以发现上面的四层结构，现在已经是三层结构了。当我们使用<merge/>标签的时候，系统会自动忽略merge层级，而把TextView直接放置与<include/>平级。
 
@@ -145,7 +145,7 @@ ViewStub就是为了解决上面问题的，ViewStub是一个轻量级的View，
 下面是一个ViewStub布局文件：
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:id="@+id/layout_wrap"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -173,7 +173,7 @@ ViewStub就是为了解决上面问题的，ViewStub是一个轻量级的View，
 layout_image.xml文件如下（layout_text.xml类似）：
 
 ```Xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/layout_image">
@@ -212,7 +212,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 示例View层级截图如下：
 
-[![viewstub_view](http://www.sunnyang.com/wp-content/uploads/2016/04/viewstub_view.png)](http://www.sunnyang.com/wp-content/uploads/2016/04/viewstub_view.png)
+[![viewstub_view](https://www.sunnyang.com/wp-content/uploads/2016/04/viewstub_view.png)](https://www.sunnyang.com/wp-content/uploads/2016/04/viewstub_view.png)
 
 ViewStub一旦visible/inflated,它自己就不在是View试图层级的一部分了。所以后面无法再使用ViewStub来控制布局，填充布局root布局如果有id，则会默认被android:inflatedId所设置的id取代，如果没有设置android:inflatedId，则会直接使用填充布局id。
 

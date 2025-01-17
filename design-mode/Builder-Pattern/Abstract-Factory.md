@@ -26,7 +26,7 @@
 
 ##### 1.模式结构
 
-![](http://upload-images.jianshu.io/upload_images/3985563-837d93237cf1143b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-837d93237cf1143b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -41,7 +41,7 @@ Product：具体产品
 
 ##### 2.时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-912f3e3f444a691b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-912f3e3f444a691b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

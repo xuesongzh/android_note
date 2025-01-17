@@ -44,9 +44,9 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 如下所示，有些部分在布局时，会被重复绘制。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-7f91a67f91bf3317.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-7f91a67f91bf3317.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-关于过度绘制产生的一般场景及解决方案，参考：[Android 过度绘制优化](http://jaeger.itscoder.com/android/2016/09/29/android-performance-overdraw.html)
+关于过度绘制产生的一般场景及解决方案，参考：[Android 过度绘制优化](https://jaeger.itscoder.com/android/2016/09/29/android-performance-overdraw.html)
 
 ## 三、绘制优化
 
@@ -60,7 +60,7 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 按照Google官方给出的性能优化典范中的标准，View的绘制频率保证60fps是最佳的，这就要求每帧绘制时间不超过16ms(16ms = 1000/60)，虽然程序很难保证16ms这个时间，但是尽量降低onDraw方法中的复杂度总是切实有效的。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-81b81fb8ab4d92db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-81b81fb8ab4d92db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 四、内存泄漏优化
 
@@ -101,7 +101,7 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 下面这张图可以帮助我们更好地理解对象的状态，以及内存泄漏的情况
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-2cb740a394402ae0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-2cb740a394402ae0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 左边未引用的对象是会被GC回收的，右边被引用的对象不会被GC回收，但是未使用的对象中除了未引用的对象，还包括已被引用的一部分对象，那么内存泄漏久发生这部分已被引用但未使用的对象。
 
@@ -132,7 +132,7 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 如果在主线程中做太多事情，会导致Activity启动时出现黑屏现象，甚至ANR。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-a1e005753b8e32a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-a1e005753b8e32a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **Android规定，Activity如果5秒钟之内无法响应屏幕触摸事件或者键盘输入事件就会出现ANR，而BroadcastReceiver如果10秒钟之内还未执行完操作也会出现ANR。**
 
@@ -142,7 +142,7 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 ## 六、ListView/RecycleView及Bitmap优化
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-d51c4fec20e776cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-d51c4fec20e776cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **ListView/RecycleView的优化思想主要从以下几个方面入手：**
 
@@ -152,11 +152,11 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 ③ListView/RecycleView的滑动时停止加载和分页加载
 
-具体优化建议及详情，参考：[ListView的优化](http://www.jianshu.com/p/f0408a0f0610)
+具体优化建议及详情，参考：[ListView的优化](https://www.jianshu.com/p/f0408a0f0610)
 
 **Bitmap优化**
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-eab380aea4795930.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-eab380aea4795930.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 主要是对加载图片进行压缩，避免加载图片多大导致OOM出现。
 
@@ -164,7 +164,7 @@ ViewStub提供了按需加载的功能，当需要时才会将ViewStub中的布�
 
 线程优化的思想就是**采用线程池，避免程序中存在大量的Thread。**线程池可以重用内部的线程，从而避免了线程的创建和销毁锁带来的性能开销，同时线程池还能有效地控制线程池的最大并法术，避免大量的线程因互相抢占系统资源从而导致阻塞现象的发生。因此在实际开发中，尽量采用线程池，而不是每次都要创建一个Thread对象。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-7dda79e4c0ec6d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-7dda79e4c0ec6d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 八、其他性能优化建议
 

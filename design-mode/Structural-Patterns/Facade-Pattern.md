@@ -12,23 +12,23 @@
 
 首先病人必须先挂号，然后门诊。如果医生要求化验，病人必须首先划价，然后缴费，才可以到化验部门做化验。化验后再回到门诊室。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-23b76827ff1c343d.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-23b76827ff1c343d.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 上图描述的是病人在医院里的体验，图中的方框代表医院。
 
 解决这种不便的方法便是引进外观模式，医院可以设置一个接待员的位置，由接待员负责代为挂号、划价、缴费、取药等。这个接待员就是外观模式的体现，病人只接触接待员，由接待员与各个部门打交道。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1d5a7ee14bb120cf.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1d5a7ee14bb120cf.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 ### 二、外观模式结构
 
 外观模式没有一个一般化的类图描述，最好的描述方法实际上就是以一个例子说明。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-7599618df0714b21.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-7599618df0714b21.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 由于门面模式的结构图过于抽象，因此把它稍稍具体点。假设子系统内有三个模块，分别是ModuleA、ModuleB和ModuleC，它们分别有一个示例方法，那么此时示例的整体结构图如下：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-891f17b65e68f454.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-891f17b65e68f454.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 在这个对象图中，出现了两个角色：  
 ●　　**外观\(Facade\)角色 ：**客户端可以调用这个角色的方法。此角色知晓相关的（一个或者多个）子系统的功能和责任。在正常情况下，本角色会将所有从客户端发来的请求委派到相应的子系统去。
@@ -37,7 +37,7 @@
 
 ##### 时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-e8fdbd86d0684d28.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-e8fdbd86d0684d28.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **子系统角色中的类：**
 
@@ -190,7 +190,7 @@ public class ModuleFacade {
 
 ##### 2.实例类图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1f2966b5104c668a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1f2966b5104c668a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 EncryptFacade充当外观类，FileReader、CipherMachine和FileWriter充当子系统类。
 

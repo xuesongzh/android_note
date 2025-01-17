@@ -36,13 +36,13 @@ ConcurrentHashMap采用 分段锁的机制，实现并发的更新操作，底�
 
 一个 ConcurrentHashMap 实例中包含由若干个 Segment 对象组成的数组，下面我们通过一个图来演示一下 ConcurrentHashMap 的结构：
 
-![](http://upload-images.jianshu.io/upload_images/2184951-728c319f48ebe35a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/2184951-728c319f48ebe35a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## JDK1.8分析
 
 1.8的实现已经抛弃了Segment分段锁机制，利用CAS+Synchronized来保证并发更新的安全，底层依然采用数组+链表+红黑树的存储结构。
 
-![](http://upload-images.jianshu.io/upload_images/2184951-3d2365ca5996274f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/2184951-3d2365ca5996274f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 重要概念
 

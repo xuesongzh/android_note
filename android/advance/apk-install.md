@@ -10,7 +10,7 @@
 
 下面将具体步骤列张图出来:
 
-![](http://upload-images.jianshu.io/upload_images/1689700-735a0fc9e593d921.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1689700-735a0fc9e593d921.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 由图可见安装过程中流转的步骤还是比较多的,下面具体分析
 

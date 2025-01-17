@@ -14,7 +14,7 @@
 
 ##### 1.模式结构
 
-![](http://upload-images.jianshu.io/upload_images/3985563-5e3b5da5f25c51a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-5e3b5da5f25c51a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 简单工厂模式包含如下角色：
 
@@ -29,7 +29,7 @@
 
 ###### 2.时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-1e2ced2ec4865bce.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-1e2ced2ec4865bce.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 ①先调用工厂类中的静态方法createProduct\(\)
 
@@ -41,7 +41,7 @@
 
 以登录功能来说，假如应用系统需要支持多种登录方式如：口令认证、域认证（口令认证通常是去数据库中验证用户，而域认证则是需要到微软的域中验证用户）。那么自然的做法就是建立一个各种登录方式都适用的接口，如下图所示：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-c40f9e18f891d00a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-c40f9e18f891d00a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **抽象产品Login**
 

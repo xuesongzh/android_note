@@ -10,7 +10,7 @@
 
 帧动画是最容易实现的一种动画，这种动画更多的依赖于完善的UI资源，他的原理就是将一张张单独的图片连贯的进行播放，从而在视觉上产生一种动画的效果；有点类似于某些软件制作gif动画的方式。
 
-![](http://upload-images.jianshu.io/upload_images/1115031-b52487cb6b97f911.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1115031-b52487cb6b97f911.gif?imageMogr2/auto-orient/strip)
 
 如上图中的京东加载动画，代码要做的事情就是把一幅幅的图片按顺序显示，造成动画的视觉效果。
 
@@ -18,7 +18,7 @@
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+<animation-list xmlns:android="https://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/a_0"
         android:duration="100" />
@@ -61,7 +61,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+<alpha xmlns:android="https://schemas.android.com/apk/res/android"
     android:duration="1000"
     android:fromAlpha="1.0"
     android:interpolator="@android:anim/accelerate_decelerate_interpolator"
@@ -72,7 +72,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<scale xmlns:android="http://schemas.android.com/apk/res/android"
+<scale xmlns:android="https://schemas.android.com/apk/res/android"
     android:duration="1000"
     android:fromXScale="0.0"
     android:fromYScale="0.0"
@@ -96,7 +96,7 @@ img.startAnimation(animation);
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
+<set xmlns:android="https://schemas.android.com/apk/res/android"
     android:interpolator="@[package:]anim/interpolator_resource"
     android:shareInterpolator=["true" | "false"] >
     <alpha
@@ -139,15 +139,15 @@ pivot 这个属性主要是在translate 和 scale 动画中，这两种动画都
 
 我们以pivotX为例，
 
-| pivotX取值 | 含义                               |
-| -------- | -------------------------------- |
-| 10       | 距离动画所在view自身左边缘10像素              |
-| 10%      | 距离动画所在view自身左边缘 的距离是整个view宽度的10% |
-| 10%p     | 距离动画所在view父控件左边缘的距离是整个view宽度的10% |
+| pivotX取值 | 含义                                                  |
+| ---------- | ----------------------------------------------------- |
+| 10         | 距离动画所在view自身左边缘10像素                      |
+| 10%        | 距离动画所在view自身左边缘 的距离是整个view宽度的10%  |
+| 10%p       | 距离动画所在view父控件左边缘的距离是整个view宽度的10% |
 
 pivotY 也是相同的原理，只不过变成的纵向的位置。如果还是不明白可以参考[源码](https://github.com/REBOOTERS/AndroidAnimationExercise)，在Tweened Animation中结合seekbar的滑动观察rotate的变化理解。
 
-![](http://upload-images.jianshu.io/upload_images/1115031-743288fa3be134ea.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1115031-743288fa3be134ea.gif?imageMogr2/auto-orient/strip)
 
 #### Java Code  实现
 
@@ -233,7 +233,7 @@ private void RotateAnimation() {
 
 在上面实现属性动画的时候，我们反复的使用到了ObjectAnimator  这个类，这个类继承自ValueAnimator，使用这个类可以对任意对象的**任意属性**进行动画操作。而ValueAnimator是整个属性动画机制当中最核心的一个类；这点从下面的图片也可以看出。
 
-![](http://upload-images.jianshu.io/upload_images/1115031-80301bbb0ae884b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1115031-80301bbb0ae884b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 属性动画核心原理，此图来自于Android SDK API 文档。
 
@@ -250,9 +250,9 @@ private void RotateAnimation() {
 
 如果，还是不理解，那么就看下面的代码吧。首先看一下下面的这两个gif动画，一个小球在屏幕上以 y=sin(x) 的数学函数轨迹运行，同时小球的颜色和半径也发生着变化，可以发现，两幅图动画变化的节奏也是不一样的。
 
-![](http://upload-images.jianshu.io/upload_images/1115031-741c714c3ef5fa84.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1115031-741c714c3ef5fa84.gif?imageMogr2/auto-orient/strip)
 
-![](http://upload-images.jianshu.io/upload_images/1115031-dbbb2e4aca44b0e7.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1115031-dbbb2e4aca44b0e7.gif?imageMogr2/auto-orient/strip)
 
 *如果不考虑属性动画，这样的一个动画纯粹的使用Canvas+Handler的方式绘制也是有可能实现的。但是会复杂很多，而且加上各种线程，会带来很多意想不到的问题。*
 
@@ -542,7 +542,7 @@ Interpolator的概念其实我们并不陌生，在补间动画中我们就使�
 
 下面都是系统帮我们定义好的一些Interpolator，我们可以通过setInterpolator 设置不同的Interpolator。
 
-![](http://upload-images.jianshu.io/upload_images/1115031-9e26dde319ebaae7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1115031-9e26dde319ebaae7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这里我们使用的Interpolator就决定了 前面我们提到的fraction。变化的节奏决定了动画所执行的百分比。不得不说，这么ValueAnimator的设计的确是很巧妙。
 
@@ -594,9 +594,9 @@ xml 文件中的标签也和属性动画的类相对应。
 
 相较于传统动画，属性动画有很多优势。那是否意味着属性动画可以完全替代传统动画呢。其实不然，两种动画都有各自的优势，属性动画如此强大，也不是没有缺点。
 
-![补间动画点击事件](http://upload-images.jianshu.io/upload_images/1115031-6864a7fffbc80884.gif?imageMogr2/auto-orient/strip)
+![补间动画点击事件](https://upload-images.jianshu.io/upload_images/1115031-6864a7fffbc80884.gif?imageMogr2/auto-orient/strip)
 
-![属性动画点击事件](http://upload-images.jianshu.io/upload_images/1115031-10bb818b5584da5e.gif?imageMogr2/auto-orient/strip)
+![属性动画点击事件](https://upload-images.jianshu.io/upload_images/1115031-10bb818b5584da5e.gif?imageMogr2/auto-orient/strip)
 
 - 从上面两幅图比较可以发现，补间动画中，虽然使用translate将图片移动了，但是点击原来的位置，依旧可以发生点击事件，而属性动画却不是。因此我们可以确定，属性动画才是真正的实现了view的移动，补间动画对view的移动更像是在不同地方绘制了一个影子，实际的对象还是处于原来的地方。
 - 当我们把动画的repeatCount设置为无限循环时，如果在Activity退出时没有及时将动画停止，属性动画会导致Activity无法释放而导致内存泄漏，而补间动画却没有问题。因此，使用属性动画时切记在Activity执行 onStop 方法时顺便将动画停止。（对这个怀疑的同学可以自己通过在动画的Update  回调方法打印日志的方式进行验证）。

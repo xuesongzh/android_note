@@ -6,7 +6,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
 
 进程间 进行**数据交互 & 共享**，即跨进程通信
 
-![](http://upload-images.jianshu.io/upload_images/944365-3c4339c5f1d4a0fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-3c4339c5f1d4a0fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 三、 原理
 
@@ -16,7 +16,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
 
 关于`ContentProvider`的使用主要介绍以下内容：
 
-![](http://upload-images.jianshu.io/upload_images/944365-5c9b0e2ebed36c3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-5c9b0e2ebed36c3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 4.1 统一资源标识符（URI）
 
@@ -33,7 +33,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
   > 1. 关于 系统预置`URI` 此处不作过多讲解，需要的同学可自行查看
   > 2. 此处主要讲解 自定义`URI`
 
-![](http://upload-images.jianshu.io/upload_images/944365-96019a2054eb27cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-96019a2054eb27cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```Java
 // 设置URI
@@ -580,13 +580,13 @@ public class MainActivity extends AppCompatActivity {
 
 ### 结果
 
-![](http://upload-images.jianshu.io/upload_images/944365-3c735e5a027df3d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-3c735e5a027df3d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 5.2 进程间进行数据共享
 
 - 实例说明：本文需要创建2个进程，即创建两个工程，作用如下
 
-![](http://upload-images.jianshu.io/upload_images/944365-c3553f24d393bd48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-c3553f24d393bd48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 进程1
 
@@ -717,12 +717,12 @@ public class MainActivity extends AppCompatActivity {
 1. 运行准备数据的进程1
    在进程1中，我们准备好了一系列数据
 
-   ![](http://upload-images.jianshu.io/upload_images/944365-3c79a2f1e3d0a2ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+   ![](https://upload-images.jianshu.io/upload_images/944365-3c79a2f1e3d0a2ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 2. 运行需要访问数据的进程2
    在进程2中，我们先向`ContentProvider`中插入数据，再查询数据
 
-## ![](http://upload-images.jianshu.io/upload_images/944365-16b20971852ee5c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+## ![](https://upload-images.jianshu.io/upload_images/944365-16b20971852ee5c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 六、优点
 
@@ -743,10 +743,10 @@ public class MainActivity extends AppCompatActivity {
 
   > 如一开始数据存储方式 采用 `SQLite` 数据库，后来把数据库换成 `MongoDB`，也不会对上层数据`ContentProvider`使用代码产生影响
 
-![](http://upload-images.jianshu.io/upload_images/944365-a0e46788a2151e4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/944365-a0e46788a2151e4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 七、 总结
 
 - 我用一张图总结本文内容
 
-![img](http://upload-images.jianshu.io/upload_images/944365-7b086f5771dd3f49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/944365-7b086f5771dd3f49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

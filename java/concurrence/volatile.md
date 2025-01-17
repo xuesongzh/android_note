@@ -4,7 +4,7 @@
 
 Java内存模型规定了**所有的变量都存储在主内存中**。**每条线程中还有自己的工作内存，线程的工作内存中保存了被该线程所使用到的变量（这些变量是从主内存中拷贝而来）**。**线程对变量的所有操作（读取，赋值）都必须在工作内存中进行。不同线程之间也无法直接访问对方工作内存中的变量，线程间变量值的传递均需要通过主内存来完成**。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-8a3d9a1b94b97e83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-8a3d9a1b94b97e83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 基于此种内存模型，便产生了多线程编程中的数据“脏读”等问题。
 
@@ -144,7 +144,7 @@ a = a + 3;    //语句3
 r = a*a;     //语句4
 ```
 这段代码有4个语句，那么可能的一个执行顺序是：
-　　![](http://upload-images.jianshu.io/upload_images/3985563-dcefcb1390cb3ed8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+　　![](https://upload-images.jianshu.io/upload_images/3985563-dcefcb1390cb3ed8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 　　
 那么可不可能是这个执行顺序呢： 语句2   语句1    语句4   语句3
 

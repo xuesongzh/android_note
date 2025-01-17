@@ -10,11 +10,11 @@
 - Proxy: 代理主题角色
 - RealSubject: 真实主题角色
 
-![](http://design-patterns.readthedocs.io/zh_CN/latest/_images/Proxy.jpg)
+![](https://design-patterns.readthedocs.io/zh_CN/latest/_images/Proxy.jpg)
 
 ## 三、时序图
 
-![](http://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_Proxy.jpg)
+![](https://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_Proxy.jpg)
 
 ## 四、模式的简单实现
 

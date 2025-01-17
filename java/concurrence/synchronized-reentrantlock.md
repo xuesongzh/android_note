@@ -80,7 +80,7 @@ JVM基于进入和退出`Monitor`对象来实现 **代码块同步** 和 **方�
 
 **对象、监视器、同步队列和执行线程间的关系如下图：**
 
-![](http://upload-images.jianshu.io/upload_images/3985563-c38812d8f45810dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-c38812d8f45810dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ##### 3.synchronized的使用场景
 

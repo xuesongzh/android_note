@@ -17,7 +17,7 @@
 
 总结就是，方法运行时，方法中引用的对象；类的静态变量引用的对象；类中常量引用的对象；Native方法中引用的对象
 
-![](http://upload-images.jianshu.io/upload_images/3985563-5865f6922a28a9fd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-5865f6922a28a9fd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
 
 **在可达性分析算法中，要真正宣告一个对象死亡，至少要经历两次标记过程：**
 

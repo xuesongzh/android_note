@@ -13,7 +13,7 @@ Window是视图的承载器，内部持有一个 DecorView，而这个DecorView�
 DecorView是FrameLayout的子类，它可以被认为是Android视图树的根节点视图。DecorView作为顶级View，一般情况下它内部包含一个竖直方向的LinearLayout，**在这个LinearLayout里面有上下三个部分，上面是个ViewStub，延迟加载的视图（应该是设置ActionBar，根据Theme设置），中间的是标题栏(根据Theme设置，有的布局没有)，下面的是内容栏。** 具体情况和Android版本及主体有关，以其中一个布局为例，如下所示：
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
     <!-- Popout bar for action modes -->
@@ -67,7 +67,7 @@ ViewRoot并不属于View树的一份子。从源码实现上来看，它既非Vi
 
 下面结构图可以清晰的揭示四者之间的关系：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-e773ab2cb83ad214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-e773ab2cb83ad214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 二、DecorView的创建
 
@@ -356,7 +356,7 @@ public void addView(View view, ViewGroup.LayoutParams params,
 
 看到其中实例化了ViewRootImpl对象，然后调用其setView()方法。其中setView()方法经过一些列折腾，最终调用了performTraversals()方法，**然后依照下图流程层层调用，完成绘制，最终界面才显示出来。**
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-582aae4fe27d0b3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-582aae4fe27d0b3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 其实ViewRootImpl的作用不止如此，还有许多功能，如事件分发。
 
@@ -364,7 +364,7 @@ public void addView(View view, ViewGroup.LayoutParams params,
 
 **硬件 -> ViewRootImpl -> DecorView -> PhoneWindow -> Activity**
 
-不详细介绍了，如果感兴趣，可以看[这篇文章](http://www.jianshu.com/p/9e6c54739217)。
+不详细介绍了，如果感兴趣，可以看[这篇文章](https://www.jianshu.com/p/9e6c54739217)。
 
 由此可见ViewRootImpl的重要性，是个连接器，负责WindowManagerService与DecorView之间的通信。
 

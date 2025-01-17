@@ -1,8 +1,8 @@
 ## 从底部弹出的选择框
 
-![popupwindow](http://upload-images.jianshu.io/upload_images/759172-08791890510199b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![popupwindow](https://upload-images.jianshu.io/upload_images/759172-08791890510199b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![dialog](http://upload-images.jianshu.io/upload_images/759172-caf757e853f7642f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2)
+![dialog](https://upload-images.jianshu.io/upload_images/759172-caf757e853f7642f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2)
 
 ## 使用popupWindow完成:
 
@@ -116,7 +116,7 @@ public class SelectPicPopupWindow extends PopupWindow implements View.OnTouchLis
 ```xml
 进入:
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="https://schemas.android.com/apk/res/android">
     <translate 
         android:duration="200"
         android:fromYDelta="100.0%"
@@ -124,7 +124,7 @@ public class SelectPicPopupWindow extends PopupWindow implements View.OnTouchLis
 </set>
 退出
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="https://schemas.android.com/apk/res/android">
     <translate 
         android:duration="200"
         android:fromYDelta="0.0"
@@ -260,4 +260,4 @@ SelectPicDialog dialog = new SelectPicDialog(mContext,R.style.MyDialog);
 
 其中最本质的差别就是：AlertDialog是非阻塞式对话框：AlertDialog弹出时，后台还可以做事情；而PopupWindow是阻塞式对话框：PopupWindow弹出时，程序会等待，在PopupWindow退出前，程序一直等待，只有当我们调用了dismiss方法的后，PopupWindow退出，程序才会向下执行。这两种区别的表现是：AlertDialog弹出时，背景是黑色的，但是当我们点击背景，AlertDialog会消失，证明程序不仅响应AlertDialog的操作，还响应其他操作，其他程序没有被阻塞，这说明了AlertDialog是非阻塞式对话框；PopupWindow弹出时，背景没有什么变化，但是当我们点击背景的时候，程序没有响应，只允许我们操作PopupWindow，其他操作被阻塞。
 
-**注意：** 这里讲的阻塞并非线程阻塞，而是阻塞了其他UI操作，详情见：[PopupWindow的"阻塞"问题](http://www.cnblogs.com/zhengxiaoyao0716/p/5914934.html)
+**注意：** 这里讲的阻塞并非线程阻塞，而是阻塞了其他UI操作，详情见：[PopupWindow的"阻塞"问题](https://www.cnblogs.com/zhengxiaoyao0716/p/5914934.html)

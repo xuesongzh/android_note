@@ -8,7 +8,7 @@
 
 ## 二、基本用例
 
-来自[OkHttp 官方网站](http://square.github.io/okhttp/#examples)。
+来自[OkHttp 官方网站](https://square.github.io/okhttp/#examples)。
 
 ### 2.1.创建 OkHttpClient 对象
 

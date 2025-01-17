@@ -139,7 +139,7 @@ MyException是继承于Exception的子类。test()的try语句块中产生Arithm
 
 ## Java异常框架
 
-![img](http://images.cnitblog.com/blog/497634/201402/111228085926220.jpg)
+![img](https://images.cnitblog.com/blog/497634/201402/111228085926220.jpg)
 
 **1. Throwable**
 

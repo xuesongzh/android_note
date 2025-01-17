@@ -11,7 +11,7 @@
 　　装饰者模式的类图如下：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-a0d0ac0c5bdf5c93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-a0d0ac0c5bdf5c93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -92,7 +92,7 @@ public class ConcreteDecoratorA extends Decorator {
 本例中，Component的角色便由鼎鼎大名的齐天大圣扮演；ConcreteComponent的角色属于大圣的本尊，就是猢狲本人；Decorator的角色由大圣的七十二变扮演。而ConcreteDecorator的角色便是鱼儿、鸟儿等七十二般变化。  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-278b469e27980e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-278b469e27980e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -193,7 +193,7 @@ public class Client {
 
 上面的例子中，第二种些方法：系统把大圣从一只猢狲装饰成了一只鸟儿（把鸟儿的功能加到了猢狲身上），然后又把鸟儿装饰成了一条鱼儿（把鱼儿的功能加到了猢狲+鸟儿身上，得到了猢狲+鸟儿+鱼儿）。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-44abe91a268fa580.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-44abe91a268fa580.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -210,7 +210,7 @@ public class Client {
 如果只有一个ConcreteComponent类，那么可以考虑去掉抽象的Component类（接口），把Decorator作为一个ConcreteComponent子类。如下图所示：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-d82f42bcec447d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-d82f42bcec447d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -219,7 +219,7 @@ public class Client {
 如果只有一个ConcreteDecorator类，那么就没有必要建立一个单独的Decorator类，而可以把Decorator和ConcreteDecorator的责任合并成一个类。甚至在只有两个ConcreteDecorator类的情况下，都可以这样做。如下图所示：  
 
 
-![](http://upload-images.jianshu.io/upload_images/3985563-d4d9c54c1139c455.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-d4d9c54c1139c455.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -276,7 +276,7 @@ bird.fly();
 
 Java I/O库的对象结构图如下，由于Java I/O的对象众多，因此只画出InputStream的部分。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-61242a7817bd22bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-61242a7817bd22bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -300,7 +300,7 @@ Java I/O库的对象结构图如下，由于Java I/O的对象众多，因此只�
 
 装饰者模式有透明和半透明两种，这两种的区别就在于装饰角色的接口与抽象构件角色的接口是否完全一致。透明的装饰者模式也就是理想的装饰者模式，要求具体构件角色、装饰角色的接口与抽象构件角色的接口完全一致。相反，如果装饰角色的接口与抽象构件角色接口不一致，也就是说装饰角色的接口比抽象构件角色的接口宽的话，装饰角色实际上已经成了一个适配器角色，这种装饰者模式也是可以接受的，称为“半透明”的装饰模式，如下图所示。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-ffea5b8521138905.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-ffea5b8521138905.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

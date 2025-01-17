@@ -16,7 +16,7 @@
 
 ##### 1.模式结构
 
-![](http://upload-images.jianshu.io/upload_images/3985563-8ce4534a7a872a09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-8ce4534a7a872a09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -34,7 +34,7 @@
 
 ##### 2.时序图
 
-![](http://upload-images.jianshu.io/upload_images/3985563-bb6ceace257078ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-bb6ceace257078ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 
@@ -48,7 +48,7 @@
 
 ### 三、工厂方法模式的使用实例
 
-![](http://upload-images.jianshu.io/upload_images/3985563-c5a708a3fbf93c26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-c5a708a3fbf93c26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   
 

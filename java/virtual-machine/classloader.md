@@ -12,7 +12,7 @@
 
 这7个阶段发生顺序如下图：
 
-![](http://upload-images.jianshu.io/upload_images/3985563-0108cc612a217322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-0108cc612a217322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 加载，验证，准备，初始化，卸载这5个阶段的顺序是确定的，而解析阶段则不一定：它在某些情况下可以在初始化完成后在开始，这是为了支持Java语言的运行时绑定。
 
@@ -109,7 +109,7 @@ d.符号引用验证
 
  双亲委派模型的工作流程是：如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。
 
-![](http://upload-images.jianshu.io/upload_images/3985563-eb333a271ec638ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/3985563-eb333a271ec638ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这样的好处是不同层次的类加载器具有不同优先级，比如所有Java对象的超级父类java.lang.Object，位于rt.jar，无论哪个类加载器加载该类，最终都是由启动类加载器进行加载，保证安全。即使用户自己编写一个java.lang.Object类并放入程序中，虽能正常编译，但不会被加载运行，保证不会出现混乱。
 
@@ -167,4 +167,4 @@ b.如果此类没有加载过，那么，再判断一下是否有父加载器；
 
 c.如果父加载器及bootstrap类加载器都没有找到指定的类，那么调用当前类加载器的findClass方法来完成类加载。
 
-关于自定义类加载器，本篇文章就不介绍了，主要是重写findClass方法，有兴趣的可以参考[这篇文章](http://www.jianshu.com/p/acc7595f1b9d)。
+关于自定义类加载器，本篇文章就不介绍了，主要是重写findClass方法，有兴趣的可以参考[这篇文章](https://www.jianshu.com/p/acc7595f1b9d)。

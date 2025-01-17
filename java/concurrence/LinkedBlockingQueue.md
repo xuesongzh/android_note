@@ -373,7 +373,7 @@ BlockingQueue还定义了一个限时等待插入操作，即在等待一定的�
     }
 ```
 
-![](http://upload-images.jianshu.io/upload_images/1684370-9bea30e290a8822c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1684370-9bea30e290a8822c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 对于LinkedBlockingQueue的源码分析就到这里，下面让我们将LinkedBlockingQueue与ArrayBlockingQueue进行一个比较。
 

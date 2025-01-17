@@ -58,12 +58,12 @@ public int getContentLength()
 
 如下图所示，描述的便是多线程的下载模型：
 
-![](http://upload-images.jianshu.io/upload_images/1824042-411c25f0cb1927de?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1824042-411c25f0cb1927de?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 在多线程断点续传下载中，有一点需要特别注意：
 由于文件是分成多个部分是被不同的线程的同时下载的，这就需要，每一条线程都分别需要有一个断点记录，和一个线程完成状态的记录；
 
-![](http://upload-images.jianshu.io/upload_images/1824042-843517c30becdcd6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1824042-843517c30becdcd6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 只有所有线程的下载状态都处于完成状态时，才能表示文件已经下载完成。
 实现记录的方法多种多样，我这里采用的是JDK自带的Properties类来记录下载参数。
@@ -72,7 +72,7 @@ public int getContentLength()
 
 通过原理的了解，便可以很快的设计出断点续传工具类的基本结构图
 
-![](http://upload-images.jianshu.io/upload_images/1824042-74a1e86dee5bd13c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1824042-74a1e86dee5bd13c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### IDownloadListener.java
 
@@ -498,6 +498,6 @@ public class DownloadListener implements IDownloadListener {
 
 ## 四、最终效果
 
-![](http://upload-images.jianshu.io/upload_images/1824042-1fc216854a28525f?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1824042-1fc216854a28525f?imageMogr2/auto-orient/strip)
 
 [Demo点我](https://github.com/AriaLyy/DownloadUtil)

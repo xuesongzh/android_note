@@ -139,7 +139,7 @@ static final class NonfairSync extends Sync {
 
    。完整的执行流程如下：
 
-   ![](http://upload-images.jianshu.io/upload_images/2184951-5bd703829cbdc56a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+   ![](https://upload-images.jianshu.io/upload_images/2184951-5bd703829cbdc56a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 公平锁实现
 

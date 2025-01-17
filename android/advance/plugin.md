@@ -6,11 +6,11 @@
 
 ### 2.背景
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-686e0a32dca54d28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-686e0a32dca54d28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3.优点
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-edc7793c43a8c9f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-edc7793c43a8c9f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 二、Android插件化基础
 
@@ -42,13 +42,13 @@
 
 其中涉及到两种ClassLoader:DexClassLoader和PathClassLoader。而DexClassLoader可以加载外部的jar,dex等文件，正是我们需要的。
 
-关于ClassLoader详解，见[ClassLoader完全解析](http://blog.csdn.net/u012124438/article/details/53235848)。
+关于ClassLoader详解，见[ClassLoader完全解析](https://blog.csdn.net/u012124438/article/details/53235848)。
 
 #### ②Java反射
 
 因为插件apk与宿主apk不在一个apk内，那么一些类的访问必然要通过反射进行获取。所以了解反射对插件化的学习是必须的。
 
-关于Java反射，见[Java反射详解](http://www.jianshu.com/p/779b3e27b26d)。
+关于Java反射，见[Java反射详解](https://www.jianshu.com/p/779b3e27b26d)。
 
 #### ③插件资源访问
 
@@ -56,19 +56,19 @@ res里的每一个资源都会在R.java里生成一个对应的Integer类型的i
 
 查看源码，通过“addAssetPath”方法重新生成一个新的Resource对象来保存插件中的资源，避免冲突。
 
-关于插件资源访问，见[使用插件中的R资源](http://blog.csdn.net/u012124438/article/details/53236723)。
+关于插件资源访问，见[使用插件中的R资源](https://blog.csdn.net/u012124438/article/details/53236723)。
 
 #### ④代理模式
 
 插件化实现的过程主要靠欺上瞒下，坑蒙拐骗来实现。想想虽然加载进来了Activity等组件，但也仅仅是最为一个对象而存在，并没有在AndroidManifest中注册，没有生命周期的回调，并不能实现我们想要的效果。因此无论是dynamic_load_apk通过代理activity来操控插件activity的方式，还是DroidPlugin通过hook activity启动过程来启动插件activity的方式，都是对代理模式的应用。
 
-关于代理模式，见[静态代理与动态代理](http://www.jianshu.com/p/27b255a6f479)。
+关于代理模式，见[静态代理与动态代理](https://www.jianshu.com/p/27b255a6f479)。
 
 至此，通过ClassLoader加载，然后通过代理模式让Activity等组件具有生命周期实现真正的功能，并且解决了资源访问问题。可能插件化已经可以简单的实现一些初步的功能，然而插件化绝不止于此。更多的内容仍需要进一步探索，不过以上知识是基础中的基础，必备之必备。
 
 ## 三、Android插件化开源项目
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-d14b0906078e525b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-d14b0906078e525b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 介绍一下其中比较重要的两个，实现思想不同，也是入门插件化可以学习的两个。
 
@@ -88,38 +88,38 @@ DroidPlugin是张勇实现的一套插件化方案，它的原理是Hook客户�
 
 ## 四、Dynamic-load-apk详解
 
-[Android插件化学习之路（一）之动态加载综述](http://blog.csdn.net/u012124438/article/details/53234223)
+[Android插件化学习之路（一）之动态加载综述](https://blog.csdn.net/u012124438/article/details/53234223)
 
-[Android插件化学习之路（二）之ClassLoader完全解析](http://blog.csdn.net/u012124438/article/details/53235848)
+[Android插件化学习之路（二）之ClassLoader完全解析](https://blog.csdn.net/u012124438/article/details/53235848)
 
-[Android插件化学习之路（三）之调用外部.dex文件中的代码](http://blog.csdn.net/u012124438/article/details/53236472)
+[Android插件化学习之路（三）之调用外部.dex文件中的代码](https://blog.csdn.net/u012124438/article/details/53236472)
 
-[Android插件化学习之路（四）之使用插件中的R资源](http://blog.csdn.net/u012124438/article/details/53236723)
+[Android插件化学习之路（四）之使用插件中的R资源](https://blog.csdn.net/u012124438/article/details/53236723)
 
-[Android插件化学习之路（五）之代理Activity](http://blog.csdn.net/u012124438/article/details/53239370)
+[Android插件化学习之路（五）之代理Activity](https://blog.csdn.net/u012124438/article/details/53239370)
 
-[Android插件化学习之路（六）之动态创建Activity](http://blog.csdn.net/u012124438/article/details/53239497)
+[Android插件化学习之路（六）之动态创建Activity](https://blog.csdn.net/u012124438/article/details/53239497)
 
-[Android插件化学习之路（七）之DL插件开发该注意的坑](http://blog.csdn.net/u012124438/article/details/53240585)
+[Android插件化学习之路（七）之DL插件开发该注意的坑](https://blog.csdn.net/u012124438/article/details/53240585)
 
-[Android插件化学习之路（八）之DynamicLoadApk 源码解析（上）](http://blog.csdn.net/u012124438/article/details/53241755)
+[Android插件化学习之路（八）之DynamicLoadApk 源码解析（上）](https://blog.csdn.net/u012124438/article/details/53241755)
 
- [Android插件化学习之路（九）之DynamicLoadApk 源码解析（下）](http://blog.csdn.net/u012124438/article/details/53242838)
+ [Android插件化学习之路（九）之DynamicLoadApk 源码解析（下）](https://blog.csdn.net/u012124438/article/details/53242838)
 
 ## 五、DroidPlugin详解
 
-[Hook机制之动态代理](http://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/)
+[Hook机制之动态代理](https://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/)
 
-[Hook机制之Binder Hook](http://weishu.me/2016/02/16/understand-plugin-framework-binder-hook/)
+[Hook机制之Binder Hook](https://weishu.me/2016/02/16/understand-plugin-framework-binder-hook/)
 
-[Hook机制之AMS&PMS](http://weishu.me/2016/03/07/understand-plugin-framework-ams-pms-hook/)
+[Hook机制之AMS&PMS](https://weishu.me/2016/03/07/understand-plugin-framework-ams-pms-hook/)
 
-[Activity生命周期管理](http://weishu.me/2016/03/21/understand-plugin-framework-activity-management/)
+[Activity生命周期管理](https://weishu.me/2016/03/21/understand-plugin-framework-activity-management/)
 
-[插件加载机制](http://weishu.me/2016/04/05/understand-plugin-framework-classloader/)
+[插件加载机制](https://weishu.me/2016/04/05/understand-plugin-framework-classloader/)
 
-[广播的管理](http://weishu.me/2016/04/12/understand-plugin-framework-receiver/)
+[广播的管理](https://weishu.me/2016/04/12/understand-plugin-framework-receiver/)
 
-[Service的插件化](http://weishu.me/2016/05/11/understand-plugin-framework-service/)
+[Service的插件化](https://weishu.me/2016/05/11/understand-plugin-framework-service/)
 
-[ContentProvider的插件化](http://weishu.me/2016/07/12/understand-plugin-framework-content-provider/)
+[ContentProvider的插件化](https://weishu.me/2016/07/12/understand-plugin-framework-content-provider/)

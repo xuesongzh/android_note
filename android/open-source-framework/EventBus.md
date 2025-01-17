@@ -10,7 +10,7 @@ EventBus是一个Android端优化的publish/subscribe消息总线，简化了应
 
 事件发布者（Publisher）：用于通知 Subscriber 有事件发生。可以在任意线程任意位置发送事件。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-42b1c487b9640141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-42b1c487b9640141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 上图解释了整个EventBus的大概工作流程：事件的发布者（Publisher）将事件（Event）通过post()方法发送。EventBus内部进行处理，找到订阅了该事件（Event）的事件订阅者（Subscriber）。然后该事件的订阅者（Subscriber）通过onEvent()方法接收事件进行相关处理（关于onEvent()在EventBus 3.0中有改动，下面详细说明）。
 
@@ -371,7 +371,7 @@ if (subscriberMethod.sticky) {
 
 到此，便完成了订阅功能。下面是订阅的具体流程图：
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-210bce35b60a5481.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-210bce35b60a5481.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### unregister()
 
@@ -508,4 +508,4 @@ private boolean postSingleEventForEventType(Object event, PostingThreadState pos
 postToSubscription 函数中会判断订阅者的 ThreadMode，从而决定在什么 Mode 下执行事件响应函数。这里就不贴源码了。后续还牵着到反射以及线程调度问题，这里就不展开了。
 以上就是post的流程，下面是具体的post的流程图。
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-6567ff2602475d05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](https://upload-images.jianshu.io/upload_images/3985563-6567ff2602475d05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
